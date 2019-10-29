@@ -27,24 +27,24 @@ class MakeY {
             // アスペクト比で分ける
             if aspect >= 1.8 {
                 // iPhoneXなど縦長
-                print("DeviceData iPhoneX width:",width,"、height:",height,"、aspect:",aspect)
+                print("MakeY iPhoneX width:",width,"、height:",height,"、aspect:",aspect)
                 device = .iPhoneX
                 gameHeight = Int(CGFloat(eGameSize.WIDTH) * aspect)
             }
             else {
                 // 9:16のiPhone
-                print("DeviceData iPhone9_16 width:",width,"、height:",height,"、aspect:",aspect)
+                print("MakeY iPhone9_16 width:",width,"、height:",height,"、aspect:",aspect)
                 device = .iPhone9_16
             }
         }
         else if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
             // iPadの場合
-            print("DeviceData デバイスはiPad")
+            print("MakeY iPad")
             device = .iPad
         }
         else {
             // 該当なしのエラー
-            print("DeviceData 判別エラー")
+            print("MakeY 判別エラー")
         }
         return sYPosition(aHeight : gameHeight, aDevice : device)
     }
