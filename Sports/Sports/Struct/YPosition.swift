@@ -22,7 +22,7 @@ struct sYPosition {
         case .iPhone9_16:
             upperAdSpace = 0
         case .iPhoneX:
-            upperAdSpace = eGameSize.WIDTH / 4  // 要調整
+            upperAdSpace = eGameSize.WIDTH / 4  // 要調整 
         case .iPad:
             upperAdSpace = eGameSize.WIDTH / 8  // 要調整
         }
