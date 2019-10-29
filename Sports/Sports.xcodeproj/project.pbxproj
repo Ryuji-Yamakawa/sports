@@ -13,6 +13,13 @@
 		4D1E48912361C15000F13E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E48902361C15000F13E41 /* Assets.xcassets */; };
 		4D1E48942361C15000F13E41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E48922361C15000F13E41 /* LaunchScreen.storyboard */; };
 		4D1E489D2361C6C700F13E41 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E489C2361C6C700F13E41 /* Time.swift */; };
+		4D78F0E423681A64004F69B1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0E323681A64004F69B1 /* Device.swift */; };
+		4D78F0E723681D5B004F69B1 /* MakeY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0E623681D5B004F69B1 /* MakeY.swift */; };
+		4D78F0EB23682C25004F69B1 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0EA23682C25004F69B1 /* GameManager.swift */; };
+		4D78F0EE23686185004F69B1 /* XPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0ED23686185004F69B1 /* XPosition.swift */; };
+		4D78F0F023686266004F69B1 /* YPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0EF23686266004F69B1 /* YPosition.swift */; };
+		4D78F0F223686FA4004F69B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0F123686FA4004F69B1 /* Game.swift */; };
+		4D78F0F42368725C004F69B1 /* GameSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0F32368725C004F69B1 /* GameSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		4D1E48932361C15000F13E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D1E48952361C15000F13E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D1E489C2361C6C700F13E41 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		4D78F0E323681A64004F69B1 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		4D78F0E623681D5B004F69B1 /* MakeY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeY.swift; sourceTree = "<group>"; };
+		4D78F0EA23682C25004F69B1 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		4D78F0ED23686185004F69B1 /* XPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPosition.swift; sourceTree = "<group>"; };
+		4D78F0EF23686266004F69B1 /* YPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPosition.swift; sourceTree = "<group>"; };
+		4D78F0F123686FA4004F69B1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		4D78F0F32368725C004F69B1 /* GameSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +70,11 @@
 		4D1E48882361C14D00F13E41 /* Sports */ = {
 			isa = PBXGroup;
 			children = (
+				4D78F0E523681CA2004F69B1 /* Engine */,
 				4D1E489B2361C6A100F13E41 /* Enum */,
+				4D78F0EC2368614C004F69B1 /* Struct */,
 				4D1E48892361C14D00F13E41 /* AppDelegate.swift */,
+				4D78F0EA23682C25004F69B1 /* GameManager.swift */,
 				4D1E488B2361C14D00F13E41 /* ViewController.swift */,
 				4D1E488D2361C14D00F13E41 /* Main.storyboard */,
 				4D1E48902361C15000F13E41 /* Assets.xcassets */,
@@ -71,8 +88,28 @@
 			isa = PBXGroup;
 			children = (
 				4D1E489C2361C6C700F13E41 /* Time.swift */,
+				4D78F0E323681A64004F69B1 /* Device.swift */,
+				4D78F0F123686FA4004F69B1 /* Game.swift */,
+				4D78F0F32368725C004F69B1 /* GameSize.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		4D78F0E523681CA2004F69B1 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				4D78F0E623681D5B004F69B1 /* MakeY.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		4D78F0EC2368614C004F69B1 /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				4D78F0ED23686185004F69B1 /* XPosition.swift */,
+				4D78F0EF23686266004F69B1 /* YPosition.swift */,
+			);
+			path = Struct;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +184,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1E489D2361C6C700F13E41 /* Time.swift in Sources */,
+				4D78F0F223686FA4004F69B1 /* Game.swift in Sources */,
+				4D78F0E423681A64004F69B1 /* Device.swift in Sources */,
+				4D78F0EB23682C25004F69B1 /* GameManager.swift in Sources */,
 				4D1E488C2361C14D00F13E41 /* ViewController.swift in Sources */,
+				4D78F0F023686266004F69B1 /* YPosition.swift in Sources */,
+				4D78F0F42368725C004F69B1 /* GameSize.swift in Sources */,
 				4D1E488A2361C14D00F13E41 /* AppDelegate.swift in Sources */,
+				4D78F0EE23686185004F69B1 /* XPosition.swift in Sources */,
+				4D78F0E723681D5B004F69B1 /* MakeY.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
