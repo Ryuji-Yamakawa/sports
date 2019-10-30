@@ -26,7 +26,6 @@ class GameManager : SKScene {
         let square = SKSpriteNode(color: UIColor.gray,
                                   size: CGSize(width: xPosition.gameWidth,
                                                height: yPosition.upperAdSpace))
-        // 四角の位置を指定。x、y それぞれフレームの真ん中を指定しています。
         square.position = CGPoint(x:0, y:yPosition.gameHeight - yPosition.upperAdSpace)
         square.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         self.addChild(square)
