@@ -1,12 +1,4 @@
-//
-//  GameManager.swift
-//  Sports
-//
-//  Created by Ryuji Yamakawa on 2019/10/29.
-//  Copyright © 2019 Project'97. All rights reserved.
-//
-//  ゲームの切り替えを行う
-//
+// ゲームの切り替えを行う
 
 import Foundation
 import SpriteKit
@@ -15,11 +7,13 @@ class GameManager : SKScene {
     
     var xPosition : sXPosition!
     var yPosition : sYPosition!
+    var touchManager : TouchManager!
     
     // GameManagerを表示する
     override func didMove(to view: SKView) {
-        // Gameの背景色を白にする
         self.backgroundColor = UIColor.white
+        // タッチマネージャを登録
+        touchManager = TouchManager()
     }
     
     // ポジションをセットする

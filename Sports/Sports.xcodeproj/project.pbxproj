@@ -20,6 +20,10 @@
 		4D78F0F023686266004F69B1 /* YPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0EF23686266004F69B1 /* YPosition.swift */; };
 		4D78F0F223686FA4004F69B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0F123686FA4004F69B1 /* Game.swift */; };
 		4D78F0F42368725C004F69B1 /* GameSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0F32368725C004F69B1 /* GameSize.swift */; };
+		4D78F0F623694741004F69B1 /* TouchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0F523694741004F69B1 /* TouchStatus.swift */; };
+		4D78F0F8236949FD004F69B1 /* DragDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0F7236949FD004F69B1 /* DragDirection.swift */; };
+		4D78F0FA23694BD3004F69B1 /* Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0F923694BD3004F69B1 /* Touch.swift */; };
+		4D78F0FC23694C92004F69B1 /* TouchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0FB23694C92004F69B1 /* TouchManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		4D78F0EF23686266004F69B1 /* YPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPosition.swift; sourceTree = "<group>"; };
 		4D78F0F123686FA4004F69B1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		4D78F0F32368725C004F69B1 /* GameSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSize.swift; sourceTree = "<group>"; };
+		4D78F0F523694741004F69B1 /* TouchStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchStatus.swift; sourceTree = "<group>"; };
+		4D78F0F7236949FD004F69B1 /* DragDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDirection.swift; sourceTree = "<group>"; };
+		4D78F0F923694BD3004F69B1 /* Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Touch.swift; sourceTree = "<group>"; };
+		4D78F0FB23694C92004F69B1 /* TouchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +82,8 @@
 				4D1E489B2361C6A100F13E41 /* Enum */,
 				4D78F0EC2368614C004F69B1 /* Struct */,
 				4D1E48892361C14D00F13E41 /* AppDelegate.swift */,
-				4D78F0EA23682C25004F69B1 /* GameManager.swift */,
 				4D1E488B2361C14D00F13E41 /* ViewController.swift */,
+				4D78F0EA23682C25004F69B1 /* GameManager.swift */,
 				4D1E488D2361C14D00F13E41 /* Main.storyboard */,
 				4D1E48902361C15000F13E41 /* Assets.xcassets */,
 				4D1E48922361C15000F13E41 /* LaunchScreen.storyboard */,
@@ -87,10 +95,12 @@
 		4D1E489B2361C6A100F13E41 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
-				4D1E489C2361C6C700F13E41 /* Time.swift */,
 				4D78F0E323681A64004F69B1 /* Device.swift */,
+				4D78F0F7236949FD004F69B1 /* DragDirection.swift */,
 				4D78F0F123686FA4004F69B1 /* Game.swift */,
 				4D78F0F32368725C004F69B1 /* GameSize.swift */,
+				4D1E489C2361C6C700F13E41 /* Time.swift */,
+				4D78F0F523694741004F69B1 /* TouchStatus.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -99,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				4D78F0E623681D5B004F69B1 /* MakeY.swift */,
+				4D78F0FB23694C92004F69B1 /* TouchManager.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -108,6 +119,7 @@
 			children = (
 				4D78F0ED23686185004F69B1 /* XPosition.swift */,
 				4D78F0EF23686266004F69B1 /* YPosition.swift */,
+				4D78F0F923694BD3004F69B1 /* Touch.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -187,10 +199,14 @@
 				4D78F0F223686FA4004F69B1 /* Game.swift in Sources */,
 				4D78F0E423681A64004F69B1 /* Device.swift in Sources */,
 				4D78F0EB23682C25004F69B1 /* GameManager.swift in Sources */,
+				4D78F0F623694741004F69B1 /* TouchStatus.swift in Sources */,
 				4D1E488C2361C14D00F13E41 /* ViewController.swift in Sources */,
 				4D78F0F023686266004F69B1 /* YPosition.swift in Sources */,
+				4D78F0FC23694C92004F69B1 /* TouchManager.swift in Sources */,
+				4D78F0FA23694BD3004F69B1 /* Touch.swift in Sources */,
 				4D78F0F42368725C004F69B1 /* GameSize.swift in Sources */,
 				4D1E488A2361C14D00F13E41 /* AppDelegate.swift in Sources */,
+				4D78F0F8236949FD004F69B1 /* DragDirection.swift in Sources */,
 				4D78F0EE23686185004F69B1 /* XPosition.swift in Sources */,
 				4D78F0E723681D5B004F69B1 /* MakeY.swift in Sources */,
 			);

@@ -1,10 +1,4 @@
 //
-//  ViewController.swift
-//  Sports
-//
-//  Created by Ryuji Yamakawa on 2019/10/24.
-//  Copyright © 2019 Project'97. All rights reserved.
-//
 
 import UIKit
 import SpriteKit
@@ -49,7 +43,7 @@ class ViewController: UIViewController {
         gameManager.setPosition(aXPosition: xPosition, aYPosition: yPosition)
         
         // ゲームを始める
-        gameManager.startGame(aGame: .stretch)
+        gameManager.startGame(aGame: .STREATH)
     }
     //ステータスバーを非表示にする
     override var prefersStatusBarHidden : Bool {
