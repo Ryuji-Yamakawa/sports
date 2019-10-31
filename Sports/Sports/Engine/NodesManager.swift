@@ -18,10 +18,14 @@ class NodesManager {
                 skScene.addChild(sNodes[a].sprites[i])
             }
         }
-        
         if sNodes[a].labels.count > 0 {
             for i in 0 ... sNodes[a].labels.count - 1 {
                 skScene.addChild(sNodes[a].labels[i])
+            }
+        }
+        if sNodes[a].touchImgSprites.count > 0 {
+            for i in 0 ... sNodes[a].touchImgSprites.count - 1 {
+                skScene.addChild(sNodes[a].touchImgSprites[i])
             }
         }
     }
@@ -47,6 +51,11 @@ class NodesManager {
         if sNodes[hiddenNo].labels.count > 0 {
             for i in 0 ... sNodes[hiddenNo].labels.count - 1 {
                 sNodes[hiddenNo].labels[i].isHidden = aHidden
+            }
+        }
+        if sNodes[hiddenNo].touchImgSprites.count > 0 {
+            for i in 0 ... sNodes[hiddenNo].touchImgSprites.count - 1 {
+                sNodes[hiddenNo].touchImgSprites[i].isHidden = aHidden
             }
         }
     }
@@ -75,9 +84,11 @@ class NodesManager {
                 if sNodes[i].labels.count > 0 {
                     skScene.removeChildren(in: sNodes[i].labels)
                 }
+                if sNodes[i].touchImgSprites.count > 0 {
+                    skScene.removeChildren(in: sNodes[i].touchImgSprites)
+                }
             }
         }
-        // 初期化しないとノードが残っている
         sNodes = []
     }
 
@@ -88,6 +99,7 @@ class NodesManager {
         
         skScene.removeChildren(in: sNodes[deleteNo].sprites)
         skScene.removeChildren(in: sNodes[deleteNo].labels)
+        skScene.removeChildren(in: sNodes[deleteNo].touchImgSprites)
         
         sNodes.remove(at : deleteNo)
     }
