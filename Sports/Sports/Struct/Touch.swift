@@ -29,6 +29,4 @@ struct STouch {
     var endX : Int = 0
     var endY : Int = 0
     var endN : String = ""
-    
-    
 }

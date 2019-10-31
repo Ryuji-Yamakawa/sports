@@ -32,6 +32,10 @@
 		4D78F10D236AD169004F69B1 /* 360x162_Upper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D78F10B236AD169004F69B1 /* 360x162_Upper@2x.png */; };
 		4D78F10E236AD169004F69B1 /* 360x162_Under@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D78F10C236AD169004F69B1 /* 360x162_Under@2x.png */; };
 		4D78F111236AD760004F69B1 /* Bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D78F110236AD760004F69B1 /* Bg@2x.png */; };
+		4D78F114236AF3C9004F69B1 /* Stretch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F113236AF3C9004F69B1 /* Stretch.swift */; };
+		4D78F116236AF3D6004F69B1 /* StretchBg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F115236AF3D6004F69B1 /* StretchBg.swift */; };
+		4D78F11A236AF82A004F69B1 /* NodesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F119236AF82A004F69B1 /* NodesManager.swift */; };
+		4D78F11C236AF8DE004F69B1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F11B236AF8DE004F69B1 /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		4D78F10B236AD169004F69B1 /* 360x162_Upper@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "360x162_Upper@2x.png"; sourceTree = "<group>"; };
 		4D78F10C236AD169004F69B1 /* 360x162_Under@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "360x162_Under@2x.png"; sourceTree = "<group>"; };
 		4D78F110236AD760004F69B1 /* Bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bg@2x.png"; sourceTree = "<group>"; };
+		4D78F113236AF3C9004F69B1 /* Stretch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stretch.swift; sourceTree = "<group>"; };
+		4D78F115236AF3D6004F69B1 /* StretchBg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchBg.swift; sourceTree = "<group>"; };
+		4D78F119236AF82A004F69B1 /* NodesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodesManager.swift; sourceTree = "<group>"; };
+		4D78F11B236AF8DE004F69B1 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		4D1E48882361C14D00F13E41 /* Sports */ = {
 			isa = PBXGroup;
 			children = (
+				4D78F112236AF386004F69B1 /* Stretch */,
 				4D78F109236AD103004F69B1 /* Img */,
 				4D78F0E523681CA2004F69B1 /* Engine */,
 				4D1E489B2361C6A100F13E41 /* Enum */,
@@ -130,6 +139,7 @@
 				4D78F0E623681D5B004F69B1 /* MakeY.swift */,
 				4D78F0FB23694C92004F69B1 /* TouchManager.swift */,
 				4D78F107236ABDC7004F69B1 /* Debug.swift */,
+				4D78F119236AF82A004F69B1 /* NodesManager.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -142,6 +152,7 @@
 				4D78F0F923694BD3004F69B1 /* Touch.swift */,
 				4D78F0FD236A6D60004F69B1 /* Label.swift */,
 				4D78F103236A76BA004F69B1 /* Sprite.swift */,
+				4D78F11B236AF8DE004F69B1 /* Node.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -170,6 +181,15 @@
 				4D78F110236AD760004F69B1 /* Bg@2x.png */,
 			);
 			path = Bg;
+			sourceTree = "<group>";
+		};
+		4D78F112236AF386004F69B1 /* Stretch */ = {
+			isa = PBXGroup;
+			children = (
+				4D78F113236AF3C9004F69B1 /* Stretch.swift */,
+				4D78F115236AF3D6004F69B1 /* StretchBg.swift */,
+			);
+			path = Stretch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +268,8 @@
 			files = (
 				4D1E489D2361C6C700F13E41 /* Time.swift in Sources */,
 				4D78F0F223686FA4004F69B1 /* Game.swift in Sources */,
+				4D78F11A236AF82A004F69B1 /* NodesManager.swift in Sources */,
+				4D78F11C236AF8DE004F69B1 /* Node.swift in Sources */,
 				4D78F0E423681A64004F69B1 /* Device.swift in Sources */,
 				4D78F0EB23682C25004F69B1 /* GameManager.swift in Sources */,
 				4D78F0F623694741004F69B1 /* TouchStatus.swift in Sources */,
@@ -255,6 +277,7 @@
 				4D78F0F023686266004F69B1 /* YPosition.swift in Sources */,
 				4D78F0FC23694C92004F69B1 /* TouchManager.swift in Sources */,
 				4D78F108236ABDC7004F69B1 /* Debug.swift in Sources */,
+				4D78F114236AF3C9004F69B1 /* Stretch.swift in Sources */,
 				4D78F0FE236A6D60004F69B1 /* Label.swift in Sources */,
 				4D78F0FA23694BD3004F69B1 /* Touch.swift in Sources */,
 				4D78F0F42368725C004F69B1 /* GameSize.swift in Sources */,
@@ -262,6 +285,7 @@
 				4D78F104236A76BA004F69B1 /* Sprite.swift in Sources */,
 				4D1E488A2361C14D00F13E41 /* AppDelegate.swift in Sources */,
 				4D78F100236A6E28004F69B1 /* Font.swift in Sources */,
+				4D78F116236AF3D6004F69B1 /* StretchBg.swift in Sources */,
 				4D78F0F8236949FD004F69B1 /* DragDirection.swift in Sources */,
 				4D78F0EE23686185004F69B1 /* XPosition.swift in Sources */,
 				4D78F0E723681D5B004F69B1 /* MakeY.swift in Sources */,

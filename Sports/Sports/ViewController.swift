@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         gameManager.setPosition(aXPosition: sXPosition, aYPosition: sYPosition)
         
         // ゲームを始める
-        gameManager.startGame(aGame: .STREATH)
+        gameManager.startGame(aGame: .STRETCH)
     }
     //ステータスバーを非表示にする
     override var prefersStatusBarHidden : Bool {

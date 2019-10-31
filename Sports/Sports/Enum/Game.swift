@@ -3,6 +3,6 @@
 import Foundation
 
 enum eGame : Int {
-    case STREATH = 1
+    case STRETCH = 1
     case SETTING = 2
 }
