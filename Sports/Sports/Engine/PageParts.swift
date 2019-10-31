@@ -30,6 +30,7 @@ class PageParts : NodesManager {
         pagePosition = aDestination
         
         if sNodesExist() == false { return }
+        
         for i in 0 ... sNodes.count - 1 {
             
             for k in 0 ... sNodes[i].nodes.count - 1 {
@@ -58,6 +59,62 @@ class PageParts : NodesManager {
                 }
                 action.append(SKAction.moveTo(x: goal, duration: 0.0))
                 sNodes[i].nodes[k].run(SKAction.sequence(action))
+            }
+        }
+    }
+    
+    // スワイプ追従
+    func swipe(aTouch : STouch) {
+        
+        if sNodesExist() == false { return }
+        
+        for i in 0 ... sNodes.count - 1 {
+            
+            var action : SKAction = SKAction()
+            
+            if aTouch.dragDirec == .HORIZONTAL || aTouch.dragDirec == .RIGHT || aTouch.dragDirec == .LEFT {
+                
+                if sNodes[i].nodes.count > 0 {
+                    
+                    for k in 0 ... sNodes[i].nodes.count - 1 {
+                        action = SKAction.moveTo(x: sNodes[i].nowPosition[k].x + CGFloat(aTouch.moveX), duration: 0.0)
+                        sNodes[i].nodes[k].run(action)
+                        
+                        if aTouch.stat == .END {
+                            sNodes[i].nowPosition[k].x += CGFloat(aTouch.moveX)
+                        }
+                    }
+                }
+            }
+            else if aTouch.dragDirec == .VERTICAL || aTouch.dragDirec == .UPPER || aTouch.dragDirec == .UNDER  {
+                
+                if sNodes[i].nodes.count > 0 {
+                    for k in 0 ... sNodes[i].nodes.count - 1 {
+                        action = SKAction.moveTo(y: sNodes[i].nowPosition[k].y + CGFloat(aTouch.moveY), duration: 0.0)
+                        sNodes[i].nodes[k].run(action)
+                        
+                        if aTouch.stat == .END {
+                            sNodes[i].nowPosition[k].y += CGFloat(aTouch.moveY)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // スワイプキャンセル
+    func swipeCancel(aTouch : STouch) {
+        
+        // タッチが完了した時
+        if aTouch.stat == .END {
+            if aTouch.dragDirec == .UNDER || aTouch.dragDirec == .UPPER || aTouch.dragDirec == .VERTICAL {
+                
+                pageChange(aDestination: pagePosition, aXFlag: false, aInitFlag: false)
+                
+            }
+            else if aTouch.dragDirec == .LEFT || aTouch.dragDirec == .RIGHT || aTouch.dragDirec == .HORIZONTAL {
+                
+                pageChange(aDestination: pagePosition, aXFlag: true, aInitFlag: false)
             }
         }
     }
