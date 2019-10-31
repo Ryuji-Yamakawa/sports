@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct sTouch {
+struct STouch {
     
     var stat : eTouchStatus = .NONE
     var dragDirec : eDragDirection = .NONE  // ドラッグの方向　遊びを超えたらeNoneではなくなる

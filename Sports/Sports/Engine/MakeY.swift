@@ -4,7 +4,7 @@ import Foundation
 import SpriteKit
 
 class MakeY {
-    func get() -> sYPosition {
+    func get() -> SYPosition {
         
         var gameHeight : Int = eGameSize.HEIGHT
         var device : eDevice = .iPhone9_16
@@ -39,6 +39,6 @@ class MakeY {
             // 該当なしのエラー
             print("MakeY 判別エラー")
         }
-        return sYPosition(aHeight : gameHeight, aDevice : device)
+        return SYPosition(aHeight : gameHeight, aDevice : device)
     }
 }

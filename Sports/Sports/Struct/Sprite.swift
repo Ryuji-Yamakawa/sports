@@ -2,7 +2,7 @@
 
 import SpriteKit
 
-struct sSprite {
+struct SSprite {
     var imgName       : String  = ""
     var name          : String  = ""
     var xyPosition    : CGPoint = CGPoint(x: 0, y: 0)

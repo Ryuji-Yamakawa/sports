@@ -20,14 +20,14 @@ class ViewController: UIViewController {
         skView.showsNodeCount = false
         
         // X座標
-        let xPosition : sXPosition = sXPosition()
-        let yPosition : sYPosition = MakeY().get()
+        let sXPosition : SXPosition = SXPosition()
+        let sYPosition : SYPosition = MakeY().get()
         
         // デバッグ：機種と縦横のサイズを表示
-        print("VC ",xPosition.gameWidth, yPosition.gameHeight)
+        print("VC ",sXPosition.gameWidth, sYPosition.gameHeight)
         
         // ゲームを定義
-        let gameManager = GameManager(size:CGSize(width: xPosition.gameWidth, height: yPosition.gameHeight))
+        let gameManager = GameManager(size:CGSize(width: sXPosition.gameWidth, height: sYPosition.gameHeight))
         
         // SKSceneScaleMode.aspectFit   縦横比を保つ。隙間ができることがある。
         // SKSceneScaleMode.aspectFil   小さい値に合わせて隙間を無くす。表示されない部分ができる。
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         skView.presentScene(gameManager)
         
         // ポジションをセットする
-        gameManager.setPosition(aXPosition: xPosition, aYPosition: yPosition)
+        gameManager.setPosition(aXPosition: sXPosition, aYPosition: sYPosition)
         
         // ゲームを始める
         gameManager.startGame(aGame: .STREATH)

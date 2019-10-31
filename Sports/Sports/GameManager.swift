@@ -5,36 +5,51 @@ import SpriteKit
 
 class GameManager : SKScene {
     
-    var xPosition : sXPosition!
-    var yPosition : sYPosition!
+    var sXPosition : SXPosition!
+    var sYPosition : SYPosition!
     var touchLockON : Bool = false
     var touchManager : TouchManager!
+    var debug : Debug!
     
     // GameManagerを起動する
     override func didMove(to view: SKView) {
         self.backgroundColor = UIColor.white
-        // タッチマネージャを初期化する
+        
         touchManager = TouchManager()
     }
     
     // ポジションをセットする
-    func setPosition(aXPosition : sXPosition, aYPosition : sYPosition) {
+    func setPosition(aXPosition : SXPosition, aYPosition : SYPosition) {
         
-        xPosition = aXPosition
-        yPosition = aYPosition
+        sXPosition = aXPosition
+        sYPosition = aYPosition
+        
+        // 後で背景クラスに移動する
+        // 背景の白
+        var sSprite = SSprite()
+        sSprite.name = "Debug"
+        sSprite.imgName = "Bg"
+        sSprite.xyPosition = CGPoint(x : aXPosition.center, y : aYPosition.center)
+        sSprite.zPosition = eZPosition.BG
+        sSprite.hidden = false
+        self.addChild(sSprite.node())
         
         // 広告の部分を塗りつぶす
         let square = SKSpriteNode(color: UIColor.gray,
-                                  size: CGSize(width: xPosition.gameWidth,
-                                               height: yPosition.upperAdSpace))
-        square.position = CGPoint(x:0, y:yPosition.gameHeight - yPosition.upperAdSpace)
+                                  size: CGSize(width: sXPosition.gameWidth,
+                                               height: sYPosition.upperAdSpace))
+        square.position = CGPoint(x:0, y: sYPosition.gameHeight - sYPosition.upperAdSpace)
         square.anchorPoint = CGPoint(x: 0.0, y: 0.0)
+        square.zPosition = eZPosition.BG
+        square.name = "AdSpace"
         self.addChild(square)
+        
+        debug = Debug( aScene: self, aXPosition: sXPosition, aYPosition: sYPosition )
     }
     
     // ゲームを始める
     func startGame(aGame : eGame) {
-        print("GameManager startGame", aGame, xPosition.gameWidth, yPosition.gameHeight)
+        print("GameManager startGame", aGame, sXPosition.gameWidth, sYPosition.gameHeight)
     }
     
     // タッチイベント
@@ -65,8 +80,8 @@ class GameManager : SKScene {
             if Int(touch.location(in: self).x - 1) < 0 {
                 outGameSizeFlag = true
             }
-            else if Int(touch.location(in: self).x + 1) > eGameSize.WIDTH {
-                x = eGameSize.WIDTH
+            else if Int(touch.location(in: self).x + 1) > sXPosition.gameWidth {
+                x = sXPosition.gameWidth
                 outGameSizeFlag = true
             }
             else {
@@ -77,8 +92,8 @@ class GameManager : SKScene {
             if Int(touch.location(in: self).y - 1) < 0 {
                 outGameSizeFlag = true
             }
-            else if Int(touch.location(in: self).y + 1) > eGameSize.HEIGHT {
-                y = eGameSize.HEIGHT
+            else if Int(touch.location(in: self).y + 1) > sYPosition.gameHeight {
+                y = sYPosition.gameHeight
                 outGameSizeFlag = true
             }
             else {
@@ -108,8 +123,9 @@ class GameManager : SKScene {
     }
     
     // タッチの結果で動作する
-    func touchAction(aTouch : sTouch) {
+    func touchAction(aTouch : STouch) {
         
+        debug.setTouch(aTouch: aTouch)
     }
     
 }

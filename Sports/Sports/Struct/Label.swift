@@ -2,7 +2,7 @@
 
 import SpriteKit
 
-struct sLabel {
+struct SLabel {
     var family      : String  = eFont.BUTTON.family()
     var name        : String  = ""
     var color       : UIColor = eFont.BUTTON.color()
