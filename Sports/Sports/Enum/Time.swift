@@ -1,3 +1,3 @@
-//  時間の定数
+//  時間の列挙型
 
 import Foundation

@@ -1,4 +1,4 @@
-//  デバイスの定数
+//  デバイスの列挙型
 
 import Foundation
 

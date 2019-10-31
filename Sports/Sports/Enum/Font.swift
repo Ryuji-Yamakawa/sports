@@ -1,4 +1,4 @@
-// 文字に関する定数
+// 文字に関する列挙型
 
 import Foundation
 import SpriteKit
