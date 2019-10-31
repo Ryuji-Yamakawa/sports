@@ -36,6 +36,8 @@
 		4D78F116236AF3D6004F69B1 /* StretchBg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F115236AF3D6004F69B1 /* StretchBg.swift */; };
 		4D78F11A236AF82A004F69B1 /* NodesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F119236AF82A004F69B1 /* NodesManager.swift */; };
 		4D78F11C236AF8DE004F69B1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F11B236AF8DE004F69B1 /* Node.swift */; };
+		4D78F11E236B0A8D004F69B1 /* PageParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F11D236B0A8D004F69B1 /* PageParts.swift */; };
+		4D78F120236B1024004F69B1 /* PagePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F11F236B1024004F69B1 /* PagePosition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		4D78F115236AF3D6004F69B1 /* StretchBg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchBg.swift; sourceTree = "<group>"; };
 		4D78F119236AF82A004F69B1 /* NodesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodesManager.swift; sourceTree = "<group>"; };
 		4D78F11B236AF8DE004F69B1 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		4D78F11D236B0A8D004F69B1 /* PageParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageParts.swift; sourceTree = "<group>"; };
+		4D78F11F236B1024004F69B1 /* PagePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagePosition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,11 +127,12 @@
 			children = (
 				4D78F0E323681A64004F69B1 /* Device.swift */,
 				4D78F0F7236949FD004F69B1 /* DragDirection.swift */,
+				4D78F0FF236A6E28004F69B1 /* Font.swift */,
 				4D78F0F123686FA4004F69B1 /* Game.swift */,
 				4D78F0F32368725C004F69B1 /* GameSize.swift */,
+				4D78F11F236B1024004F69B1 /* PagePosition.swift */,
 				4D1E489C2361C6C700F13E41 /* Time.swift */,
 				4D78F0F523694741004F69B1 /* TouchStatus.swift */,
-				4D78F0FF236A6E28004F69B1 /* Font.swift */,
 				4D78F105236A78DE004F69B1 /* ZPosition.swift */,
 			);
 			path = Enum;
@@ -136,10 +141,11 @@
 		4D78F0E523681CA2004F69B1 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				4D78F0E623681D5B004F69B1 /* MakeY.swift */,
-				4D78F0FB23694C92004F69B1 /* TouchManager.swift */,
 				4D78F107236ABDC7004F69B1 /* Debug.swift */,
+				4D78F0E623681D5B004F69B1 /* MakeY.swift */,
 				4D78F119236AF82A004F69B1 /* NodesManager.swift */,
+				4D78F11D236B0A8D004F69B1 /* PageParts.swift */,
+				4D78F0FB23694C92004F69B1 /* TouchManager.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -147,12 +153,12 @@
 		4D78F0EC2368614C004F69B1 /* Struct */ = {
 			isa = PBXGroup;
 			children = (
+				4D78F0FD236A6D60004F69B1 /* Label.swift */,
+				4D78F11B236AF8DE004F69B1 /* Node.swift */,
+				4D78F103236A76BA004F69B1 /* Sprite.swift */,
+				4D78F0F923694BD3004F69B1 /* Touch.swift */,
 				4D78F0ED23686185004F69B1 /* XPosition.swift */,
 				4D78F0EF23686266004F69B1 /* YPosition.swift */,
-				4D78F0F923694BD3004F69B1 /* Touch.swift */,
-				4D78F0FD236A6D60004F69B1 /* Label.swift */,
-				4D78F103236A76BA004F69B1 /* Sprite.swift */,
-				4D78F11B236AF8DE004F69B1 /* Node.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1E489D2361C6C700F13E41 /* Time.swift in Sources */,
+				4D78F11E236B0A8D004F69B1 /* PageParts.swift in Sources */,
 				4D78F0F223686FA4004F69B1 /* Game.swift in Sources */,
 				4D78F11A236AF82A004F69B1 /* NodesManager.swift in Sources */,
 				4D78F11C236AF8DE004F69B1 /* Node.swift in Sources */,
@@ -286,6 +293,7 @@
 				4D1E488A2361C14D00F13E41 /* AppDelegate.swift in Sources */,
 				4D78F100236A6E28004F69B1 /* Font.swift in Sources */,
 				4D78F116236AF3D6004F69B1 /* StretchBg.swift in Sources */,
+				4D78F120236B1024004F69B1 /* PagePosition.swift in Sources */,
 				4D78F0F8236949FD004F69B1 /* DragDirection.swift in Sources */,
 				4D78F0EE23686185004F69B1 /* XPosition.swift in Sources */,
 				4D78F0E723681D5B004F69B1 /* MakeY.swift in Sources */,

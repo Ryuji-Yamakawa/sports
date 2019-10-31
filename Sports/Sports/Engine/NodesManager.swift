@@ -3,29 +3,27 @@
 import SpriteKit
 
 class NodesManager {
+    
     var skScene : SKScene!
     var sNodes : [SNode] = []
     
-    init( aScene: SKScene ) {
+    let sXPosition : SXPosition!
+    let sYPosition : SYPosition!
+    
+    let NAME_ERROR_NO : Int = 999
+    
+    init( aScene: SKScene, aXPosition : SXPosition, aYPosition : SYPosition ) {
         skScene = aScene
+        sXPosition = aXPosition
+        sYPosition = aYPosition
     }
     
     // ノードを表示する
     func addChild(a : Int) {
         
-        if sNodes[a].sprites.count > 0 {
-            for i in 0 ... sNodes[a].sprites.count - 1 {
-                skScene.addChild(sNodes[a].sprites[i])
-            }
-        }
-        if sNodes[a].labels.count > 0 {
-            for i in 0 ... sNodes[a].labels.count - 1 {
-                skScene.addChild(sNodes[a].labels[i])
-            }
-        }
-        if sNodes[a].touchImgSprites.count > 0 {
-            for i in 0 ... sNodes[a].touchImgSprites.count - 1 {
-                skScene.addChild(sNodes[a].touchImgSprites[i])
+        if sNodes[a].nodes.count > 0 {
+            for i in 0 ... sNodes[a].nodes.count - 1 {
+                skScene.addChild(sNodes[a].nodes[i])
             }
         }
     }
@@ -38,24 +36,27 @@ class NodesManager {
         return false
     }
     
-    // ノードを隠す
+    // 全てのノードのHiddenを変更
+    func hiddenAll(aHidden : Bool ) {
+        if sNodesExist() == true {
+            for i in 0 ... sNodes.count - 1 {
+                if sNodes[i].nodes.count > 0 {
+                    for k in 0 ... sNodes[i].nodes.count - 1 {
+                        sNodes[i].nodes[k].isHidden = aHidden
+                    }
+                }
+            }
+        }
+    }
+    
+    // 特定のノードのHiddenを変更
     func hiddenNode(aName : String, aHidden : Bool ) {
         
         let hiddenNo : Int = nameToNo(aName : aName)
             
-        if sNodes[hiddenNo].sprites.count > 0 {
-            for i in 0 ... sNodes[hiddenNo].sprites.count - 1 {
-                sNodes[hiddenNo].sprites[i].isHidden = aHidden
-            }
-        }
-        if sNodes[hiddenNo].labels.count > 0 {
-            for i in 0 ... sNodes[hiddenNo].labels.count - 1 {
-                sNodes[hiddenNo].labels[i].isHidden = aHidden
-            }
-        }
-        if sNodes[hiddenNo].touchImgSprites.count > 0 {
-            for i in 0 ... sNodes[hiddenNo].touchImgSprites.count - 1 {
-                sNodes[hiddenNo].touchImgSprites[i].isHidden = aHidden
+        if sNodes[hiddenNo].nodes.count > 0 {
+            for i in 0 ... sNodes[hiddenNo].nodes.count - 1 {
+                sNodes[hiddenNo].nodes[i].isHidden = aHidden
             }
         }
     }
@@ -71,21 +72,15 @@ class NodesManager {
             }
         }
         print("NodesManager nameToNoでエラー")
-        return 999
+        return NAME_ERROR_NO
     }
     
     // 全てのノードを削除する
-    func deleteSNodes() {
+    func deleteAll() {
         if sNodesExist() == true {
             for i in 0 ... sNodes.count - 1 {
-                if sNodes[i].sprites.count > 0 {
-                    skScene.removeChildren(in: sNodes[i].sprites)
-                }
-                if sNodes[i].labels.count > 0 {
-                    skScene.removeChildren(in: sNodes[i].labels)
-                }
-                if sNodes[i].touchImgSprites.count > 0 {
-                    skScene.removeChildren(in: sNodes[i].touchImgSprites)
+                if sNodes[i].nodes.count > 0 {
+                    skScene.removeChildren(in: sNodes[i].nodes)
                 }
             }
         }
@@ -97,9 +92,7 @@ class NodesManager {
         
         let deleteNo : Int = nameToNo(aName : aName)
         
-        skScene.removeChildren(in: sNodes[deleteNo].sprites)
-        skScene.removeChildren(in: sNodes[deleteNo].labels)
-        skScene.removeChildren(in: sNodes[deleteNo].touchImgSprites)
+        skScene.removeChildren(in: sNodes[deleteNo].nodes)
         
         sNodes.remove(at : deleteNo)
     }
