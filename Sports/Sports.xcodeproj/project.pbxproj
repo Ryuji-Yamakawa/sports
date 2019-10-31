@@ -28,6 +28,7 @@
 		4D78F100236A6E28004F69B1 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0FF236A6E28004F69B1 /* Font.swift */; };
 		4D78F104236A76BA004F69B1 /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F103236A76BA004F69B1 /* Sprite.swift */; };
 		4D78F106236A78DE004F69B1 /* ZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F105236A78DE004F69B1 /* ZPosition.swift */; };
+		4D78F108236ABDC7004F69B1 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F107236ABDC7004F69B1 /* Debug.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		4D78F0FF236A6E28004F69B1 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		4D78F103236A76BA004F69B1 /* Sprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprite.swift; sourceTree = "<group>"; };
 		4D78F105236A78DE004F69B1 /* ZPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPosition.swift; sourceTree = "<group>"; };
+		4D78F107236ABDC7004F69B1 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				4D78F0E623681D5B004F69B1 /* MakeY.swift */,
 				4D78F0FB23694C92004F69B1 /* TouchManager.swift */,
+				4D78F107236ABDC7004F69B1 /* Debug.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				4D1E488C2361C14D00F13E41 /* ViewController.swift in Sources */,
 				4D78F0F023686266004F69B1 /* YPosition.swift in Sources */,
 				4D78F0FC23694C92004F69B1 /* TouchManager.swift in Sources */,
+				4D78F108236ABDC7004F69B1 /* Debug.swift in Sources */,
 				4D78F0FE236A6D60004F69B1 /* Label.swift in Sources */,
 				4D78F0FA23694BD3004F69B1 /* Touch.swift in Sources */,
 				4D78F0F42368725C004F69B1 /* GameSize.swift in Sources */,
