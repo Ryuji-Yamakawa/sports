@@ -1,15 +1,13 @@
 // タッチの値を管理する
 
 import Foundation
+
 class TouchManager {
-    //---------------------------------------------------------------------------
-    // 変数定義
     var touch : sTouch!  // タッチ変数
     let play : Int = 80 // ドラッグ開始までの遊び　あそび
-    //---------------------------------------------------------------------------
-    // 初期化
+    
     init() { touch = sTouch() }
-    //---------------------------------------------------------------------------
+    
     // タッチビギン
     func begin( x : Int, y : Int , node : String) {
         
@@ -24,7 +22,7 @@ class TouchManager {
         
         touch.beforeY = y   // ver.2.2スクロールに変更。
     }
-    //---------------------------------------------------------------------------
+    
     // タッチドラッグ
     func drag( x : Int, y : Int , node : String) {
         //print("TouchManager：ドラッグ：", x , y , node)
@@ -61,7 +59,7 @@ class TouchManager {
             //print("TouchManager：ドラッグ量は x: ",touch.moveX ," y: " , touch.moveY)
         }
     }
-    //---------------------------------------------------------------------------
+    
     // タッチエンド
     func end( x : Int, y : Int , node : String) {
         //print("TouchManager：エンド：", x , y , node)
@@ -72,13 +70,6 @@ class TouchManager {
         touch.endX = x
         touch.endY = y
         touch.endN = node
-        
-        // ver.2.2スクロールに変更。
-        // ここでもう一度 accelerationY をとるとすごい小さい値になる。
-        //print("TouchMテスト",touch.accelerationY)
-        //touch.accelerationY = touch.nowY - touch.beforeY
-        //touch.beforeY = touch.nowY
-        //print("TouchMテスト2",touch.accelerationY)
         
         // 遊びを超えていたら。
         if touch.dragDirec != .NONE {
@@ -93,7 +84,7 @@ class TouchManager {
         if touch.dragDirec == .VERTICAL && touch.moveY <= eGameSize.HEIGHT / 10  * ( -1 ) { touch.dragDirec = .UNDER }
         
     }
-    //---------------------------------------------------------------------------
+    
     // タッチステータスを返す
     func getTouch() -> sTouch {
         return touch
