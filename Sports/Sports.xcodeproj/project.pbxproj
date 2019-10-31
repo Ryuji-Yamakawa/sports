@@ -24,6 +24,8 @@
 		4D78F0F8236949FD004F69B1 /* DragDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0F7236949FD004F69B1 /* DragDirection.swift */; };
 		4D78F0FA23694BD3004F69B1 /* Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0F923694BD3004F69B1 /* Touch.swift */; };
 		4D78F0FC23694C92004F69B1 /* TouchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0FB23694C92004F69B1 /* TouchManager.swift */; };
+		4D78F0FE236A6D60004F69B1 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0FD236A6D60004F69B1 /* Label.swift */; };
+		4D78F100236A6E28004F69B1 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0FF236A6E28004F69B1 /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		4D78F0F7236949FD004F69B1 /* DragDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDirection.swift; sourceTree = "<group>"; };
 		4D78F0F923694BD3004F69B1 /* Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Touch.swift; sourceTree = "<group>"; };
 		4D78F0FB23694C92004F69B1 /* TouchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchManager.swift; sourceTree = "<group>"; };
+		4D78F0FD236A6D60004F69B1 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		4D78F0FF236A6E28004F69B1 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 				4D78F0F32368725C004F69B1 /* GameSize.swift */,
 				4D1E489C2361C6C700F13E41 /* Time.swift */,
 				4D78F0F523694741004F69B1 /* TouchStatus.swift */,
+				4D78F0FF236A6E28004F69B1 /* Font.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 				4D78F0ED23686185004F69B1 /* XPosition.swift */,
 				4D78F0EF23686266004F69B1 /* YPosition.swift */,
 				4D78F0F923694BD3004F69B1 /* Touch.swift */,
+				4D78F0FD236A6D60004F69B1 /* Label.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -203,9 +209,11 @@
 				4D1E488C2361C14D00F13E41 /* ViewController.swift in Sources */,
 				4D78F0F023686266004F69B1 /* YPosition.swift in Sources */,
 				4D78F0FC23694C92004F69B1 /* TouchManager.swift in Sources */,
+				4D78F0FE236A6D60004F69B1 /* Label.swift in Sources */,
 				4D78F0FA23694BD3004F69B1 /* Touch.swift in Sources */,
 				4D78F0F42368725C004F69B1 /* GameSize.swift in Sources */,
 				4D1E488A2361C14D00F13E41 /* AppDelegate.swift in Sources */,
+				4D78F100236A6E28004F69B1 /* Font.swift in Sources */,
 				4D78F0F8236949FD004F69B1 /* DragDirection.swift in Sources */,
 				4D78F0EE23686185004F69B1 /* XPosition.swift in Sources */,
 				4D78F0E723681D5B004F69B1 /* MakeY.swift in Sources */,
