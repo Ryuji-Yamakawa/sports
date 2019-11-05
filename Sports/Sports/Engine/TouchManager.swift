@@ -19,6 +19,7 @@ class TouchManager {
         sTouch.beginX = x
         sTouch.beginY = y
         sTouch.beginN = node
+        sTouch.dragDirec = .NONE
         
         sTouch.beforeY = y   // ver.2.2スクロールに変更。
     }

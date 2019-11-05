@@ -16,5 +16,10 @@ class HomeButton : BasicButtonParts {
         sBasicButton.touchImg = "540x136_ButtonTouch"
         sBasicButton.xyPosition = CGPoint(x: aXPosition.parts[4][2], y: aYPosition.parts[14][2])
         make(aBasicButton: sBasicButton)
+
+        sBasicButton.name = "Home2"
+        sBasicButton.text = "テキスト2"
+        sBasicButton.xyPosition = CGPoint(x: aXPosition.parts[4][2], y: aYPosition.parts[14][4])
+        make(aBasicButton: sBasicButton)
     }
 }

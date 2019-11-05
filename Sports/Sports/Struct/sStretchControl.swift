@@ -2,7 +2,7 @@
 
 import SpriteKit
 
-struct SHomeControl {
+struct SStretchControl {
     var pageLeft    : ePage = .NONE
     var pageRight   : ePage = .NONE
     var pageNow     : ePage = .HOME

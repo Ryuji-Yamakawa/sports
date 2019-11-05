@@ -42,6 +42,7 @@ class BasicButtonParts: PageParts {
             sNode.touchImgExist = true
             sSprite.imgName     = aBasicButton.touchImg
             sNode.nodes.append(sSprite.node())
+            sNode.nodes[sNode.nodes.count - 1].isHidden = true  // 必ず隠す
             sNode.initPosition.append(aBasicButton.xyPosition)
             sNode.nowPosition.append(aBasicButton.xyPosition)
         }

@@ -6,22 +6,35 @@ class PageParts : NodesManager {
     
     var pagePosition : ePagePosition = .CENTER
     
-    // ボタンのタッチ画像を表示
-    func shine(aTouch : STouch) {
-        
+    // タッチされたときの画像を表示/非表示
+    func touchImgHidden(aTouch : STouch) {
         if sNodesExist() == false { return }
         
-        hiddenAll(aHidden: true)
+        // 全てのタッチ画像を隠す
+        for i in 0 ... sNodes.count - 1 {
+            if sNodes[i].touchImgExist == true {
+                sNodes[i].nodes[sNodes[i].nodes.count - 1].isHidden = true
+            }
+        }
         
         if aTouch.stat == .END  { return }
         
         if aTouch.dragDirec != .NONE { return }
         
+        if getNodeExist(aName: aTouch.nowN) == false { return }
+        
         let touchedNo : Int = nameToNo(aName: aTouch.nowN)
         
         if touchedNo == NAME_ERROR_NO { return }
         
-        hiddenNode(aName: aTouch.nowN, aHidden: false)
+        // 一致したタッチ画像を表示する
+        for i in 0 ... sNodes.count - 1 {
+            if sNodes[i].touchImgExist == true {
+                if touchedNo == i {
+                    sNodes[i].nodes[sNodes[i].nodes.count - 1].isHidden = false
+                }
+            }
+        }
     }
     
     // ページ移動する

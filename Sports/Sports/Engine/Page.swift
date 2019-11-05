@@ -51,14 +51,14 @@ class Page {
         pageParts = []
     }
     
-    func shine(aTouch: STouch) {
+    func touchImgHidden(aTouch: STouch) {
         if pageParts.count == 0 { return }
         for i in 0 ... pageParts.count - 1 {
-            pageParts[i].shine(aTouch: aTouch)
+            pageParts[i].touchImgHidden(aTouch: aTouch)
         }
     }
     
-    // ボタンが.ENDでタッチされているかの判断
+    // ENDでタッチされているノードがあるか判断
     func checkTouchEnd( aTouch : STouch ) -> Bool {
         // ページの要素がないなら終了
         if pageParts.count == 0 { return false }
