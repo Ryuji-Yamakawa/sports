@@ -81,8 +81,6 @@ class PageParts : NodesManager {
                     action.append(SKAction.moveTo(y: goal, duration: 0.0))
                 }
                 
-                print("PP Goalは",goal,self)
-                
                 sNodes[i].nodes[k].run(SKAction.sequence(action))
             }
         }
@@ -129,8 +127,6 @@ class PageParts : NodesManager {
     
     // スワイプキャンセル
     func swipeCancel(aTouch : STouch) {
-        
-        print("PP確認",aTouch.dragDirec,"クラスは",self)
         
         if aTouch.stat == .END {
             if aTouch.dragDirec == .UNDER || aTouch.dragDirec == .UPPER || aTouch.dragDirec == .VERTICAL {

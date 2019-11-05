@@ -11,8 +11,7 @@ class Home : Page {
         
         pageParts.append(HomeButton(aSKScene: skScene, aXPosition: sXPosition, aYPosition: sYPosition))
         
-        pagePosition = .CENTER
-        pageChange(aDestination: pagePosition, aXFlag: true, aInitFlag: true)
+        pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: true)
     }
     
     func setTouch(aTouch : STouch, aGameControl : SGameControl, aStretchControl : SStretchControl) -> (SGameControl , SStretchControl) {
@@ -25,13 +24,15 @@ class Home : Page {
         
         // ENDでタッチされているノードがあるなら
         if checkTouchEnd(aTouch: aTouch) == true {
-            if aTouch.endN == "Home" {
+            if aTouch.endN == HomeButton.mSoccer {
                 rStretchControl.pageNext = .SOCCER
                 rGameControl.touchLockTime = STime().basicLock
             }
+            else if aTouch.endN == HomeButton.mBasket {
+                rStretchControl.pageNext = .BASKET
+                rGameControl.touchLockTime = STime().basicLock
+            }
         }
-        
-        
         
         return (rGameControl, rStretchControl)
     }

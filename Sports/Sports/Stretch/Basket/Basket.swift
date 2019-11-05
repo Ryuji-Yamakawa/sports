@@ -1,15 +1,15 @@
-// サッカー選手のストレッチ選択画面
+// バスケット選手のストレッチ選択画面
 
 import SpriteKit
 
-class Soccer : Page {
+class Basket : Page {
     
-    var soccerButton : SoccerButton!
+    var basketButton : BasketButton!
     
     override init (aSKScene : SKScene, aXPosition : SXPosition, aYPosition : SYPosition) {
         super.init(aSKScene: aSKScene, aXPosition: aXPosition, aYPosition: aYPosition)
         
-        pageParts.append(SoccerButton(aSKScene: skScene, aXPosition: sXPosition, aYPosition: sYPosition))
+        pageParts.append(BasketButton(aSKScene: skScene, aXPosition: sXPosition, aYPosition: sYPosition))
         
         pageChange(aDestination: .RIGHT, aXFlag: true, aInitFlag: true)
     }
@@ -24,7 +24,7 @@ class Soccer : Page {
         
         // ENDでタッチされているノードがあるなら
         if checkTouchEnd(aTouch: aTouch) == true {
-            if aTouch.endN == SoccerButton.mBack {
+            if aTouch.endN == BasketButton.mBack {
                 rStretchControl.pageNext = .HOME
                 rGameControl.touchLockTime = STime().basicLock
             }
