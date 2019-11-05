@@ -72,6 +72,8 @@ class GameManager : SKScene {
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent? ) {
         makeStructTouch(touches: touches, aTouchStatus: .END)
+        // タッチを初期化する
+        touchManager = TouchManager()
     }
     
     // タッチの構造体を更新する

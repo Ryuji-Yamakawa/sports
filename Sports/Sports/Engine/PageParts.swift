@@ -56,21 +56,31 @@ class PageParts : NodesManager {
                     goal = sNodes[i].initPosition[k].x + aDestination.distance(aXposition: sXPosition, aYposition: sYPosition)
                     distance = Double(sNodes[i].nowPosition[k].x - goal) / 1.5
                     sNodes[i].nowPosition[k].x = goal
+
+                    // 初期化ではないなら滑らかになる
+                    if aInitFlag == false {
+                        for k in 0 ... STime().cell - 1 {
+                            action.append(SKAction.moveTo(x: goal + CGFloat(distance / pow(2, Double(k + 1) ) ),
+                                                          duration: (TimeInterval(STime().frame * (CGFloat(STime().cell) - CGFloat(k) ) ) ) ) )
+                        }
+                    }
+                    action.append(SKAction.moveTo(x: goal, duration: 0.0))
                 }
                 else {
                     goal = sNodes[i].initPosition[k].y + aDestination.distance(aXposition: sXPosition, aYposition: sYPosition)
                     distance = Double(sNodes[i].nowPosition[k].y - goal) / 1.5
                     sNodes[i].nowPosition[k].y = goal
+
+                    // 初期化ではないなら滑らかになる
+                    if aInitFlag == false {
+                        for k in 0 ... STime().cell - 1 {
+                            action.append(SKAction.moveTo(y: goal + CGFloat(distance / pow(2, Double(k + 1) ) ),
+                                                          duration: (TimeInterval(STime().frame * (CGFloat(STime().cell) - CGFloat(k) ) ) ) ) )
+                        }
+                    }
+                    action.append(SKAction.moveTo(y: goal, duration: 0.0))
                 }
                 
-                // 初期化ではないなら滑らかになる
-                if aInitFlag == false {
-                    for k in 0 ... eTime.CELL - 1 {
-                        action.append(SKAction.moveTo(x: goal + CGFloat(distance / pow(2, Double(k + 1) ) ),
-                                                      duration: (TimeInterval(eTime.FRAME * (CGFloat(eTime.CELL) - CGFloat(k) ) ) ) ) )
-                    }
-                }
-                action.append(SKAction.moveTo(x: goal, duration: 0.0))
                 sNodes[i].nodes[k].run(SKAction.sequence(action))
             }
         }
@@ -102,6 +112,7 @@ class PageParts : NodesManager {
             else if aTouch.dragDirec == .VERTICAL || aTouch.dragDirec == .UPPER || aTouch.dragDirec == .UNDER  {
                 
                 if sNodes[i].nodes.count > 0 {
+                    print("PP確認",sNodes[i].nowPosition[0].y + CGFloat(aTouch.moveY))
                     for k in 0 ... sNodes[i].nodes.count - 1 {
                         action = SKAction.moveTo(y: sNodes[i].nowPosition[k].y + CGFloat(aTouch.moveY), duration: 0.0)
                         sNodes[i].nodes[k].run(action)
@@ -118,15 +129,11 @@ class PageParts : NodesManager {
     // スワイプキャンセル
     func swipeCancel(aTouch : STouch) {
         
-        // タッチが完了した時
         if aTouch.stat == .END {
             if aTouch.dragDirec == .UNDER || aTouch.dragDirec == .UPPER || aTouch.dragDirec == .VERTICAL {
-                
                 pageChange(aDestination: pagePosition, aXFlag: false, aInitFlag: false)
-                
             }
             else if aTouch.dragDirec == .LEFT || aTouch.dragDirec == .RIGHT || aTouch.dragDirec == .HORIZONTAL {
-                
                 pageChange(aDestination: pagePosition, aXFlag: true, aInitFlag: false)
             }
         }

@@ -12,7 +12,7 @@
 		4D1E488F2361C14D00F13E41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E488D2361C14D00F13E41 /* Main.storyboard */; };
 		4D1E48912361C15000F13E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E48902361C15000F13E41 /* Assets.xcassets */; };
 		4D1E48942361C15000F13E41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E48922361C15000F13E41 /* LaunchScreen.storyboard */; };
-		4D1E489D2361C6C700F13E41 /* eTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E489C2361C6C700F13E41 /* eTime.swift */; };
+		4D1E489D2361C6C700F13E41 /* sTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E489C2361C6C700F13E41 /* sTime.swift */; };
 		4D3A3513236FE2E000907FC9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A3512236FE2E000907FC9 /* Home.swift */; };
 		4D3A3515236FE3BF00907FC9 /* ePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A3514236FE3BF00907FC9 /* ePage.swift */; };
 		4D3A3517236FE4F800907FC9 /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A3516236FE4F800907FC9 /* HomeButton.swift */; };
@@ -58,7 +58,7 @@
 		4D1E48902361C15000F13E41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D1E48932361C15000F13E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D1E48952361C15000F13E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D1E489C2361C6C700F13E41 /* eTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eTime.swift; sourceTree = "<group>"; };
+		4D1E489C2361C6C700F13E41 /* sTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sTime.swift; sourceTree = "<group>"; };
 		4D3A3512236FE2E000907FC9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		4D3A3514236FE3BF00907FC9 /* ePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ePage.swift; sourceTree = "<group>"; };
 		4D3A3516236FE4F800907FC9 /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
@@ -152,7 +152,6 @@
 				4D78F0F32368725C004F69B1 /* eGameSize.swift */,
 				4D3A3514236FE3BF00907FC9 /* ePage.swift */,
 				4D78F11F236B1024004F69B1 /* ePagePosition.swift */,
-				4D1E489C2361C6C700F13E41 /* eTime.swift */,
 				4D78F0F523694741004F69B1 /* eTouchStatus.swift */,
 				4D78F105236A78DE004F69B1 /* eZPosition.swift */,
 			);
@@ -200,6 +199,7 @@
 				4D78F0FD236A6D60004F69B1 /* sLabel.swift */,
 				4D78F11B236AF8DE004F69B1 /* sNode.swift */,
 				4D78F103236A76BA004F69B1 /* sSprite.swift */,
+				4D1E489C2361C6C700F13E41 /* sTime.swift */,
 				4D78F0F923694BD3004F69B1 /* sTouch.swift */,
 				4D78F0ED23686185004F69B1 /* sXPosition.swift */,
 				4D78F0EF23686266004F69B1 /* sYPosition.swift */,
@@ -320,7 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D1E489D2361C6C700F13E41 /* eTime.swift in Sources */,
+				4D1E489D2361C6C700F13E41 /* sTime.swift in Sources */,
 				4D78F11E236B0A8D004F69B1 /* PageParts.swift in Sources */,
 				4D3A3524237159FA00907FC9 /* Page.swift in Sources */,
 				4D3A3515236FE3BF00907FC9 /* ePage.swift in Sources */,
