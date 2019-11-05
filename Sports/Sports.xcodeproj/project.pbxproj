@@ -21,6 +21,8 @@
 		4D3A35222371520E00907FC9 /* sGameControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A35212371520E00907FC9 /* sGameControl.swift */; };
 		4D3A3524237159FA00907FC9 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A3523237159FA00907FC9 /* Page.swift */; };
 		4D3A35262371623F00907FC9 /* sStretchControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A35252371623F00907FC9 /* sStretchControl.swift */; };
+		4D3A35292371A1F000907FC9 /* Soccer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A35282371A1F000907FC9 /* Soccer.swift */; };
+		4D3A352B2371A1F800907FC9 /* SoccerBg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A352A2371A1F800907FC9 /* SoccerBg.swift */; };
 		4D41A5F0236E4F84000A85DE /* sBasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A5EF236E4F84000A85DE /* sBasicButton.swift */; };
 		4D41A5F2236E90FE000A85DE /* BasicButtonParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A5F1236E90FE000A85DE /* BasicButtonParts.swift */; };
 		4D78F0E423681A64004F69B1 /* eDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0E323681A64004F69B1 /* eDevice.swift */; };
@@ -67,6 +69,8 @@
 		4D3A35212371520E00907FC9 /* sGameControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sGameControl.swift; sourceTree = "<group>"; };
 		4D3A3523237159FA00907FC9 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		4D3A35252371623F00907FC9 /* sStretchControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sStretchControl.swift; sourceTree = "<group>"; };
+		4D3A35282371A1F000907FC9 /* Soccer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soccer.swift; sourceTree = "<group>"; };
+		4D3A352A2371A1F800907FC9 /* SoccerBg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerBg.swift; sourceTree = "<group>"; };
 		4D41A5EF236E4F84000A85DE /* sBasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sBasicButton.swift; sourceTree = "<group>"; };
 		4D41A5F1236E90FE000A85DE /* BasicButtonParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButtonParts.swift; sourceTree = "<group>"; };
 		4D78F0E323681A64004F69B1 /* eDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eDevice.swift; sourceTree = "<group>"; };
@@ -176,6 +180,15 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		4D3A35272371A1BA00907FC9 /* Soccer */ = {
+			isa = PBXGroup;
+			children = (
+				4D3A35282371A1F000907FC9 /* Soccer.swift */,
+				4D3A352A2371A1F800907FC9 /* SoccerBg.swift */,
+			);
+			path = Soccer;
+			sourceTree = "<group>";
+		};
 		4D78F0E523681CA2004F69B1 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +253,7 @@
 				4D78F113236AF3C9004F69B1 /* Stretch.swift */,
 				4D78F115236AF3D6004F69B1 /* StretchBg.swift */,
 				4D3A3511236FE22300907FC9 /* Home */,
+				4D3A35272371A1BA00907FC9 /* Soccer */,
 			);
 			path = Stretch;
 			sourceTree = "<group>";
@@ -332,6 +346,7 @@
 				4D41A5F0236E4F84000A85DE /* sBasicButton.swift in Sources */,
 				4D3A35222371520E00907FC9 /* sGameControl.swift in Sources */,
 				4D78F0EB23682C25004F69B1 /* GameManager.swift in Sources */,
+				4D3A35292371A1F000907FC9 /* Soccer.swift in Sources */,
 				4D78F0F623694741004F69B1 /* eTouchStatus.swift in Sources */,
 				4D1E488C2361C14D00F13E41 /* ViewController.swift in Sources */,
 				4D78F0F023686266004F69B1 /* sYPosition.swift in Sources */,
@@ -345,6 +360,7 @@
 				4D78F104236A76BA004F69B1 /* sSprite.swift in Sources */,
 				4D1E488A2361C14D00F13E41 /* AppDelegate.swift in Sources */,
 				4D3A35262371623F00907FC9 /* sStretchControl.swift in Sources */,
+				4D3A352B2371A1F800907FC9 /* SoccerBg.swift in Sources */,
 				4D78F100236A6E28004F69B1 /* eFont.swift in Sources */,
 				4D41A5F2236E90FE000A85DE /* BasicButtonParts.swift in Sources */,
 				4D78F116236AF3D6004F69B1 /* StretchBg.swift in Sources */,

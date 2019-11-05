@@ -9,7 +9,7 @@ enum ePagePosition : Int {
     case UPPER    = 5
     case UNDER    = 6
     
-    func distance(aXposition : SXPosition, aYposition : SYPosition) -> CGFloat {
+    func distanceX(aXposition : SXPosition) -> CGFloat {
         switch self {
         case .CENTER:
             return 0
@@ -17,6 +17,21 @@ enum ePagePosition : Int {
             return CGFloat(aXposition.gameWidth * (-1))
         case .RIGHT:
             return CGFloat(aXposition.gameWidth)
+        case .UPPER:
+            return 0
+        case .UNDER:
+            return 0
+        }
+    }
+    
+    func distanceY(aYposition : SYPosition) -> CGFloat {
+        switch self {
+        case .CENTER:
+            return 0
+        case .LEFT:
+            return 0
+        case .RIGHT:
+            return 0
         case .UPPER:
             return CGFloat(aYposition.gameHeight)
         case .UNDER:

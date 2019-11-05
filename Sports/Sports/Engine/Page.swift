@@ -35,7 +35,7 @@ class Page {
         }
     }
     
-    func pageChange( aDestination : ePagePosition, aXFlag : Bool, aInitFlag : Bool) {
+    func pageChange(aDestination : ePagePosition, aXFlag : Bool, aInitFlag : Bool) {
         if pageParts.count == 0 { return }
         for i in 0 ... pageParts.count - 1 {
             pageParts[i].pageChange(aDestination: aDestination, aXFlag: aXFlag, aInitFlag: aInitFlag)

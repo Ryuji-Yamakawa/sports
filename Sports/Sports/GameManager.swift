@@ -149,6 +149,15 @@ class GameManager : SKScene {
         }
         
         // タッチロックの時間をセット。
+        if sGameControl.touchLockTime != 0.0 {
+           touchLockON = true
+            //アニメーション後の処理
+            DispatchQueue.main.asyncAfter(deadline: .now() + sGameControl.touchLockTime) {
+                // タッチロック解除
+                self.touchLockON = false
+            }
+            sGameControl.touchLockTime = 0.0
+        }
     }
     
 }

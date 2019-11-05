@@ -53,7 +53,7 @@ class PageParts : NodesManager {
                 var distance : Double = 0.0
                 
                 if aXFlag == true {
-                    goal = sNodes[i].initPosition[k].x + aDestination.distance(aXposition: sXPosition, aYposition: sYPosition)
+                    goal = sNodes[i].initPosition[k].x + aDestination.distanceX(aXposition: sXPosition)
                     distance = Double(sNodes[i].nowPosition[k].x - goal) / 1.5
                     sNodes[i].nowPosition[k].x = goal
 
@@ -67,7 +67,7 @@ class PageParts : NodesManager {
                     action.append(SKAction.moveTo(x: goal, duration: 0.0))
                 }
                 else {
-                    goal = sNodes[i].initPosition[k].y + aDestination.distance(aXposition: sXPosition, aYposition: sYPosition)
+                    goal = sNodes[i].initPosition[k].y + aDestination.distanceY(aYposition: sYPosition)
                     distance = Double(sNodes[i].nowPosition[k].y - goal) / 1.5
                     sNodes[i].nowPosition[k].y = goal
 
@@ -80,6 +80,8 @@ class PageParts : NodesManager {
                     }
                     action.append(SKAction.moveTo(y: goal, duration: 0.0))
                 }
+                
+                print("PP Goalは",goal,self)
                 
                 sNodes[i].nodes[k].run(SKAction.sequence(action))
             }
@@ -112,7 +114,6 @@ class PageParts : NodesManager {
             else if aTouch.dragDirec == .VERTICAL || aTouch.dragDirec == .UPPER || aTouch.dragDirec == .UNDER  {
                 
                 if sNodes[i].nodes.count > 0 {
-                    print("PP確認",sNodes[i].nowPosition[0].y + CGFloat(aTouch.moveY))
                     for k in 0 ... sNodes[i].nodes.count - 1 {
                         action = SKAction.moveTo(y: sNodes[i].nowPosition[k].y + CGFloat(aTouch.moveY), duration: 0.0)
                         sNodes[i].nodes[k].run(action)
@@ -128,6 +129,8 @@ class PageParts : NodesManager {
     
     // スワイプキャンセル
     func swipeCancel(aTouch : STouch) {
+        
+        print("PP確認",aTouch.dragDirec,"クラスは",self)
         
         if aTouch.stat == .END {
             if aTouch.dragDirec == .UNDER || aTouch.dragDirec == .UPPER || aTouch.dragDirec == .VERTICAL {
