@@ -2,7 +2,7 @@
 
 import SpriteKit
 
-struct GameControl {
+struct SGameControl {
     var nowPlay : eGame = .STRETCH
     var nextGame : eGame = .STRETCH
     var touchLockTime : TimeInterval = 0.0

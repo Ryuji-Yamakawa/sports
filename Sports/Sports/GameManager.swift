@@ -5,6 +5,7 @@ import SpriteKit
 
 class GameManager : SKScene {
     
+    var sGameControl : SGameControl = SGameControl()
     var sXPosition : SXPosition!
     var sYPosition : SYPosition!
     var touchLockON : Bool = false
@@ -51,8 +52,15 @@ class GameManager : SKScene {
     // ゲームを始める
     func startGame(aGame : eGame) {
         print("GameManager startGame", aGame, sXPosition.gameWidth, sYPosition.gameHeight)
-        stretch = Stretch(aSKScene: self, aXPosition: sXPosition, aYPosition: sYPosition)
         
+        sGameControl.nowPlay = aGame
+        
+        switch sGameControl.nowPlay {
+        case .STRETCH:
+            stretch = Stretch(aSKScene: self, aXPosition: sXPosition, aYPosition: sYPosition)
+        case .SETTING:
+            print("GameManager startGame 作成中")
+        }
     }
     
     // タッチイベント
@@ -129,6 +137,16 @@ class GameManager : SKScene {
     func touchAction(aTouch : STouch) {
         
         debug.setTouch(aTouch: aTouch)
+        
+        switch sGameControl.nowPlay {
+        case .STRETCH : sGameControl = stretch.setTouch(aTouch: aTouch, aGameControl: sGameControl)
+        case .SETTING : print("GameManager touchAction 作成中")
+        }
+        
+        if sGameControl.nowPlay != sGameControl.nextGame {
+        }
+        
+        // タッチロックの時間をセット。
     }
     
 }

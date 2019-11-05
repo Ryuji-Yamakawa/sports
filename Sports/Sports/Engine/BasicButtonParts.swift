@@ -32,7 +32,6 @@ class BasicButtonParts: PageParts {
             sLabel.text     = aBasicButton.text
             sLabel.xyPosition  = aBasicButton.xyPosition
             sLabel.zPosition = aBasicButton.zPosition
-            print("BBP確認　テキスト")
             sNode.nodes.append(sLabel.node())
             sNode.initPosition.append(aBasicButton.xyPosition)
             sNode.nowPosition.append(aBasicButton.xyPosition)
@@ -42,7 +41,6 @@ class BasicButtonParts: PageParts {
         if aBasicButton.touchImg != "" {
             sNode.touchImgExist = true
             sSprite.imgName     = aBasicButton.touchImg
-            print("BBP確認　タッチ画像")
             sNode.nodes.append(sSprite.node())
             sNode.initPosition.append(aBasicButton.xyPosition)
             sNode.nowPosition.append(aBasicButton.xyPosition)

@@ -97,4 +97,14 @@ class NodesManager {
         sNodes.remove(at : deleteNo)
     }
     
+    // ノードが含まれているかを判断する
+    func getNodeExist(aName : String) -> Bool {
+        if sNodesExist() == true {
+            for i in 0 ... sNodes.count - 1 {
+                if sNodes[i].name == aName { return true }
+            }
+        }
+        return false
+    }
+    
 }
