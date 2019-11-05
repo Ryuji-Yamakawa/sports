@@ -12,8 +12,8 @@ class NodesManager {
     
     let NAME_ERROR_NO : Int = 999
     
-    init( aScene: SKScene, aXPosition : SXPosition, aYPosition : SYPosition ) {
-        skScene = aScene
+    init( aSKScene: SKScene, aXPosition : SXPosition, aYPosition : SYPosition ) {
+        skScene = aSKScene
         sXPosition = aXPosition
         sYPosition = aYPosition
     }

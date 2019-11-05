@@ -16,6 +16,8 @@ class Home {
         skScene = aSKScene
         sXPosition = aXPosition
         sYPosition = aYPosition
+        
+        pageParts.append(HomeButton(aSKScene: skScene, aXPosition: sXPosition, aYPosition: sYPosition))
     }
     
     // スワイプ

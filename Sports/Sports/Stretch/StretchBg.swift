@@ -1,9 +1,11 @@
-//
-//  StretchBg.swift
-//  Sports
-//
-//  Created by Ryuji Yamakawa on 2019/10/31.
-//  Copyright © 2019 Project'97. All rights reserved.
-//
+// ストレッチゲーム
 
-import Foundation
+import SpriteKit
+
+class StretchBg : PageParts {
+    
+    override init(aSKScene : SKScene, aXPosition : SXPosition, aYPosition : SYPosition) {
+        super.init(aSKScene: aSKScene, aXPosition: aXPosition, aYPosition: aYPosition)
+        
+    }
+}

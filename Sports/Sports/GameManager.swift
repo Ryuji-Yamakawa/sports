@@ -10,6 +10,7 @@ class GameManager : SKScene {
     var touchLockON : Bool = false
     var touchManager : TouchManager!
     var debug : Debug!
+    var stretch : Stretch!
     
     // GameManagerを起動する
     override func didMove(to view: SKView) {
@@ -50,6 +51,8 @@ class GameManager : SKScene {
     // ゲームを始める
     func startGame(aGame : eGame) {
         print("GameManager startGame", aGame, sXPosition.gameWidth, sYPosition.gameHeight)
+        stretch = Stretch(aSKScene: self, aXPosition: sXPosition, aYPosition: sYPosition)
+        
     }
     
     // タッチイベント
