@@ -8,6 +8,7 @@ class Stretch {
     var home : Home!
     var soccer : Soccer!
     var basket : Basket!
+    var timeCount : TimeCount!
     var sStretchControl : SStretchControl = SStretchControl()
     
     init(aSKScene : SKScene, aXPosition : SXPosition, aYPosition : SYPosition) {
@@ -15,6 +16,7 @@ class Stretch {
         home        = Home(aSKScene: aSKScene, aXPosition : aXPosition, aYPosition : aYPosition)
         soccer      = Soccer(aSKScene: aSKScene, aXPosition : aXPosition, aYPosition : aYPosition)
         basket      = Basket(aSKScene: aSKScene, aXPosition : aXPosition, aYPosition : aYPosition)
+        timeCount   = TimeCount(aSKScene: aSKScene, aXPosition : aXPosition, aYPosition : aYPosition)
     }
     
     func setTouch(aTouch : STouch, aGameControl : SGameControl) -> SGameControl {
@@ -26,7 +28,7 @@ class Stretch {
         case .HOME      : (sGameControl, sStretchControl) = home.setTouch(aTouch: aTouch, aGameControl: sGameControl, aStretchControl: sStretchControl)
         case .SOCCER    : (sGameControl, sStretchControl) = soccer.setTouch(aTouch: aTouch, aGameControl: sGameControl, aStretchControl: sStretchControl)
         case .BASKET    : (sGameControl, sStretchControl) = basket.setTouch(aTouch: aTouch, aGameControl: sGameControl, aStretchControl: sStretchControl)
-        case .TIMECOUNT : print("Stretchエラー 作成中")
+        case .TIMECOUNT : (sGameControl, sStretchControl) = timeCount.setTouch(aTouch: aTouch, aGameControl: sGameControl, aStretchControl: sStretchControl)
         }
         
         // あそびの外
@@ -38,7 +40,7 @@ class Stretch {
                     case .HOME      : home.swipe(aTouch: aTouch)
                     case .SOCCER    : soccer.swipe(aTouch: aTouch)
                     case .BASKET    : basket.swipe(aTouch: aTouch)
-                    case .TIMECOUNT : print("Stretchエラー 作成中")
+                    case .TIMECOUNT : timeCount.swipe(aTouch: aTouch)
                 }
             }
             
@@ -65,7 +67,7 @@ class Stretch {
                             case .HOME      : home.swipeCancel(aTouch: aTouch)
                             case .SOCCER    : soccer.swipeCancel(aTouch: aTouch)
                             case .BASKET    : basket.swipeCancel(aTouch: aTouch)
-                            case .TIMECOUNT : print("Stretchエラー 作成中")
+                            case .TIMECOUNT : timeCount.swipeCancel(aTouch: aTouch)
                         }
                     }
                     sGameControl.touchLockTime = STime().basicLock
@@ -78,6 +80,10 @@ class Stretch {
         }
         
         sStretchControl.pageNow = sStretchControl.pageNext
+        
+        if aTouch.stat == .END {
+            print("Stretch確認",sStretchControl.pageLeft, sStretchControl.pageNow, sStretchControl.pageRight)
+        }
         
         return aGameControl
     }
@@ -110,6 +116,34 @@ class Stretch {
             
             home.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
             basket.pageChange(aDestination: .RIGHT, aXFlag: true, aInitFlag: false)
+        }
+        else if sStretchControl.pageNow == .SOCCER && sStretchControl.pageNext == .TIMECOUNT {
+            sStretchControl.pageLeft = .SOCCER
+            sStretchControl.pageRight = .NONE
+            
+            soccer.pageChange(aDestination: .LEFT, aXFlag: true, aInitFlag: false)
+            timeCount.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
+        }
+        else if sStretchControl.pageNow == .TIMECOUNT && sStretchControl.pageNext == .SOCCER {
+            sStretchControl.pageLeft = .HOME
+            sStretchControl.pageRight = .TIMECOUNT
+            
+            soccer.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
+            timeCount.pageChange(aDestination: .RIGHT, aXFlag: true, aInitFlag: false)
+        }
+        else if sStretchControl.pageNow == .BASKET && sStretchControl.pageNext == .TIMECOUNT {
+            sStretchControl.pageLeft = .BASKET
+            sStretchControl.pageRight = .NONE
+            
+            basket.pageChange(aDestination: .LEFT, aXFlag: true, aInitFlag: false)
+            timeCount.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
+        }
+        else if sStretchControl.pageNow == .TIMECOUNT && sStretchControl.pageNext == .BASKET {
+            sStretchControl.pageLeft = .HOME
+            sStretchControl.pageRight = .TIMECOUNT
+            
+            basket.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
+            timeCount.pageChange(aDestination: .RIGHT, aXFlag: true, aInitFlag: false)
         }
     }
 }

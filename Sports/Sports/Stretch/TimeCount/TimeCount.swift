@@ -1,15 +1,15 @@
-// サッカー選手のストレッチ選択画面
+// ストレッチの時間を計る画面
 
 import SpriteKit
 
-class Soccer : Page {
+class TimeCount : Page {
     
-    var soccerButton : SoccerButton!
+    var timeCountButton : TimeCountButton!
     
     override init (aSKScene : SKScene, aXPosition : SXPosition, aYPosition : SYPosition) {
         super.init(aSKScene: aSKScene, aXPosition: aXPosition, aYPosition: aYPosition)
         
-        pageParts.append(SoccerButton(aSKScene: skScene, aXPosition: sXPosition, aYPosition: sYPosition))
+        pageParts.append(TimeCountButton(aSKScene: skScene, aXPosition: sXPosition, aYPosition: sYPosition))
         
         pageChange(aDestination: .RIGHT, aXFlag: true, aInitFlag: true)
     }
@@ -24,12 +24,8 @@ class Soccer : Page {
         
         // ENDでタッチされているノードがあるなら
         if checkTouchEnd(aTouch: aTouch) == true {
-            if aTouch.endN == SoccerButton.mBack {
-                rStretchControl.pageNext = .HOME
-                rGameControl.touchLockTime = STime().basicLock
-            }
-            else if aTouch.endN == SoccerButton.mStretch1 {
-                rStretchControl.pageNext = .TIMECOUNT
+            if aTouch.endN == TimeCountButton.mBack {
+                rStretchControl.pageNext = rStretchControl.pageLeft
                 rGameControl.touchLockTime = STime().basicLock
             }
         }
