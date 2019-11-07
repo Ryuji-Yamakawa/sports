@@ -22,14 +22,14 @@ class StretchBg : PageParts {
                                                height: sYPosition.upperAdSpace))
         square.position = CGPoint(x:0, y: sYPosition.gameHeight - sYPosition.upperAdSpace)
         square.anchorPoint = CGPoint(x: 0.0, y: 0.0)
-        square.zPosition = eZPosition.BG
+        square.zPosition = eZPosition.AD
         square.name = "AdSpace"
         aSKScene.addChild(square)
         
         // メニュー
         sSprite.imgName = "MenuBg"
         sSprite.xyPosition = CGPoint(x : aXPosition.parts[1][1], y : aYPosition.menuHeight)
-        sSprite.zPosition = eZPosition.BG
+        sSprite.zPosition = eZPosition.MENU_BG
         sSprite.hidden = false
         aSKScene.addChild(sSprite.node())
     }

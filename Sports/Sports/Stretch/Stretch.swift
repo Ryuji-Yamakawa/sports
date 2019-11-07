@@ -88,8 +88,10 @@ class Stretch {
         
         // ページが変わっていたら変更
         if sStretchControl.pageNow != sStretchControl.pageNext {
+            // ページのアニメーション
             pageChange()
             sStretchControl.pageNow = sStretchControl.pageNext
+            // メニューのアニメーション
             menu.menuChange(aStretchControl: sStretchControl)
         }
         
