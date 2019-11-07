@@ -80,7 +80,7 @@ class MenuButton : BasicButtonParts {
             
             
             goal = aMenuPosition.position(aXposition: sXPosition)
-            distance = Double(sNodes[a].nowPosition[k].x - goal) / 1.5
+            distance = Double(sNodes[a].nowPosition[k].x - goal)
             sNodes[a].nowPosition[k].x = goal
 
             // 滑らかにする

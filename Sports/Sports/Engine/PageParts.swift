@@ -54,7 +54,7 @@ class PageParts : NodesManager {
                 
                 if aXFlag == true {
                     goal = sNodes[i].initPosition[k].x + aDestination.distanceX(aXposition: sXPosition)
-                    distance = Double(sNodes[i].nowPosition[k].x - goal) / 1.5
+                    distance = Double(sNodes[i].nowPosition[k].x - goal)
                     sNodes[i].nowPosition[k].x = goal
 
                     // 初期化ではないなら滑らかになる
@@ -68,7 +68,7 @@ class PageParts : NodesManager {
                 }
                 else {
                     goal = sNodes[i].initPosition[k].y + aDestination.distanceY(aYposition: sYPosition)
-                    distance = Double(sNodes[i].nowPosition[k].y - goal) / 1.5
+                    distance = Double(sNodes[i].nowPosition[k].y - goal)
                     sNodes[i].nowPosition[k].y = goal
 
                     // 初期化ではないなら滑らかになる
