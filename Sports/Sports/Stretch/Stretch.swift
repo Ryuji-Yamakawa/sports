@@ -9,6 +9,7 @@ class Stretch {
     var soccer : Soccer!
     var basket : Basket!
     var timeCount : TimeCount!
+    var menu : Menu!
     var sStretchControl : SStretchControl = SStretchControl()
     
     init(aSKScene : SKScene, aXPosition : SXPosition, aYPosition : SYPosition) {
@@ -17,6 +18,7 @@ class Stretch {
         soccer      = Soccer(aSKScene: aSKScene, aXPosition : aXPosition, aYPosition : aYPosition)
         basket      = Basket(aSKScene: aSKScene, aXPosition : aXPosition, aYPosition : aYPosition)
         timeCount   = TimeCount(aSKScene: aSKScene, aXPosition : aXPosition, aYPosition : aYPosition)
+        menu        = Menu(aSKScene: aSKScene, aXPosition : aXPosition, aYPosition : aYPosition)
     }
     
     func setTouch(aTouch : STouch, aGameControl : SGameControl) -> SGameControl {

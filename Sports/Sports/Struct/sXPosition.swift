@@ -10,6 +10,10 @@ struct SXPosition {
     
     var parts : [[CGFloat]] = []
     
+    var menuLeftOut  : CGFloat = 0.0
+    var menuLeft     : CGFloat = 0.0
+    var menuRight    : CGFloat = 0.0
+    var menuRightOut : CGFloat = 0.0
     
     init() {
         for i in 0 ... 10 {
@@ -28,6 +32,11 @@ struct SXPosition {
             }
             parts.append(result)
         }
+        
+        menuLeftOut  = parts[4][1] * (-1)
+        menuLeft     = parts[4][1]
+        menuRight    = parts[4][4]
+        menuRightOut = parts[4][4] + parts[4][1] * 2
     }
     
     

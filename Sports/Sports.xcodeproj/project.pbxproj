@@ -34,6 +34,9 @@
 		4D3A35462372AA6900907FC9 /* stretchMan01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3A35432372AA6900907FC9 /* stretchMan01@2x.png */; };
 		4D3A354A2373ADE500907FC9 /* stretchMan04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3A35492373ADE500907FC9 /* stretchMan04@2x.png */; };
 		4D3A354E2373EED000907FC9 /* MenuBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3A354D2373EED000907FC9 /* MenuBg@2x.png */; };
+		4D3A35512373F26D00907FC9 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A35502373F26D00907FC9 /* Menu.swift */; };
+		4D3A35532373F2E700907FC9 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A35522373F2E700907FC9 /* MenuButton.swift */; };
+		4D3A35552373F40E00907FC9 /* 360x136@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3A35542373F40E00907FC9 /* 360x136@2x.png */; };
 		4D41A5F0236E4F84000A85DE /* sBasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A5EF236E4F84000A85DE /* sBasicButton.swift */; };
 		4D41A5F2236E90FE000A85DE /* BasicButtonParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A5F1236E90FE000A85DE /* BasicButtonParts.swift */; };
 		4D78F0E423681A64004F69B1 /* eDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0E323681A64004F69B1 /* eDevice.swift */; };
@@ -93,6 +96,9 @@
 		4D3A35432372AA6900907FC9 /* stretchMan01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stretchMan01@2x.png"; sourceTree = "<group>"; };
 		4D3A35492373ADE500907FC9 /* stretchMan04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stretchMan04@2x.png"; sourceTree = "<group>"; };
 		4D3A354D2373EED000907FC9 /* MenuBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MenuBg@2x.png"; sourceTree = "<group>"; };
+		4D3A35502373F26D00907FC9 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		4D3A35522373F2E700907FC9 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		4D3A35542373F40E00907FC9 /* 360x136@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "360x136@2x.png"; sourceTree = "<group>"; };
 		4D41A5EF236E4F84000A85DE /* sBasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sBasicButton.swift; sourceTree = "<group>"; };
 		4D41A5F1236E90FE000A85DE /* BasicButtonParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButtonParts.swift; sourceTree = "<group>"; };
 		4D78F0E323681A64004F69B1 /* eDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eDevice.swift; sourceTree = "<group>"; };
@@ -197,6 +203,7 @@
 		4D3A351823700F3400907FC9 /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				4D3A35542373F40E00907FC9 /* 360x136@2x.png */,
 				4D3A351A23700F8800907FC9 /* 540x136_ButtonBase@2x.png */,
 				4D3A351F237010CA00907FC9 /* 540x136_ButtonTouch@2x.png */,
 			);
@@ -240,6 +247,15 @@
 				4D3A35492373ADE500907FC9 /* stretchMan04@2x.png */,
 			);
 			path = StretchMan;
+			sourceTree = "<group>";
+		};
+		4D3A354F2373F26100907FC9 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				4D3A35502373F26D00907FC9 /* Menu.swift */,
+				4D3A35522373F2E700907FC9 /* MenuButton.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		4D78F0E523681CA2004F69B1 /* Engine */ = {
@@ -306,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				4D78F113236AF3C9004F69B1 /* Stretch.swift */,
+				4D3A354F2373F26100907FC9 /* Menu */,
 				4D78F115236AF3D6004F69B1 /* StretchBg.swift */,
 				4D3A3511236FE22300907FC9 /* Home */,
 				4D3A352E2371B65300907FC9 /* Basket */,
@@ -385,6 +402,7 @@
 				4D1E488F2361C14D00F13E41 /* Main.storyboard in Resources */,
 				4D3A35442372AA6900907FC9 /* stretchMan02@2x.png in Resources */,
 				4D78F10E236AD169004F69B1 /* 360x162_Under@2x.png in Resources */,
+				4D3A35552373F40E00907FC9 /* 360x136@2x.png in Resources */,
 				4D3A351C23700F8800907FC9 /* 540x136_ButtonBase@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,9 +444,11 @@
 				4D1E488A2361C14D00F13E41 /* AppDelegate.swift in Sources */,
 				4D3A35262371623F00907FC9 /* sStretchControl.swift in Sources */,
 				4D3A35372372428900907FC9 /* TimeCountButton.swift in Sources */,
+				4D3A35512373F26D00907FC9 /* Menu.swift in Sources */,
 				4D3A352B2371A1F800907FC9 /* SoccerButton.swift in Sources */,
 				4D78F100236A6E28004F69B1 /* eFont.swift in Sources */,
 				4D41A5F2236E90FE000A85DE /* BasicButtonParts.swift in Sources */,
+				4D3A35532373F2E700907FC9 /* MenuButton.swift in Sources */,
 				4D78F116236AF3D6004F69B1 /* StretchBg.swift in Sources */,
 				4D78F120236B1024004F69B1 /* ePagePosition.swift in Sources */,
 				4D78F0F8236949FD004F69B1 /* eDragDirection.swift in Sources */,
