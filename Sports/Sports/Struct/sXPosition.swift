@@ -6,7 +6,7 @@ import SpriteKit
 struct SXPosition {
     
     var gameWidth : Int = 540
-    var center : Int = 270
+    var center : CGFloat = 270
     
     var parts : [[CGFloat]] = []
     

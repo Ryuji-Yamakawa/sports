@@ -7,7 +7,7 @@ struct SYPosition {
     
     var gameHeight : Int = 960
     var upperAdSpace : Int = 0
-    var center : Int = 480
+    var center : CGFloat = 480
     
     var parts : [[CGFloat]] = []
     
@@ -16,7 +16,7 @@ struct SYPosition {
     // デバイスの有効高さからY座標を設定
     init(aHeight : Int, aDevice : eDevice) {
         gameHeight = aHeight
-        center = gameHeight / 2
+        center = CGFloat(gameHeight / 2)
         
         switch aDevice {
         case .iPhone9_16:

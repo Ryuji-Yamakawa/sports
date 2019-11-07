@@ -75,9 +75,14 @@ class Stretch {
         
         // buttonActionを実行・リセット
         if sStretchControl.buttonAction.contains("Stretch") == true {
+            // ストレッチ
             if timeCount.getNoeStretchMan() != sStretchControl.buttonAction {
                 timeCount.setStretchMan(aName: sStretchControl.buttonAction)
             }
+        }
+        else if sStretchControl.buttonAction == HomeButton.mSoccer || sStretchControl.buttonAction == HomeButton.mBasket {
+            // ホームでボタンを押した時、右のページをリセット
+            sStretchControl.pageRightOut = .NONE
         }
         sStretchControl.buttonAction = ""
         
@@ -85,6 +90,7 @@ class Stretch {
         if sStretchControl.pageNow != sStretchControl.pageNext {
             pageChange()
             sStretchControl.pageNow = sStretchControl.pageNext
+            menu.menuChange(aStretchControl: sStretchControl)
         }
         
         // デバッグ

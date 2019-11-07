@@ -27,10 +27,14 @@ class Home : Page {
             if aTouch.endN == HomeButton.mSoccer {
                 rStretchControl.pageNext = .SOCCER
                 rGameControl.touchLockTime = STime().basicLock
+                
+                rStretchControl.buttonAction = aTouch.endN
             }
             else if aTouch.endN == HomeButton.mBasket {
                 rStretchControl.pageNext = .BASKET
                 rGameControl.touchLockTime = STime().basicLock
+                
+                rStretchControl.buttonAction = aTouch.endN
             }
         }
         

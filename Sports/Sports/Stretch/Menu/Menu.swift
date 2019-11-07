@@ -10,4 +10,7 @@ class Menu {
         menuButton = MenuButton(aSKScene: aSKScene, aXPosition: aXPosition, aYPosition: aYPosition)
     }
     
+    func menuChange(aStretchControl : SStretchControl) {
+        menuButton.menuChange(aStretchControl: aStretchControl)
+    }
 }
