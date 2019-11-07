@@ -11,6 +11,7 @@ struct SYPosition {
     
     var parts : [[CGFloat]] = []
     
+    var menuHeight : CGFloat = 0.0
     
     // デバイスの有効高さからY座標を設定
     init(aHeight : Int, aDevice : eDevice) {
@@ -33,10 +34,16 @@ struct SYPosition {
                     result.append(CGFloat(gameHeight - upperAdSpace))
                 }
                 else {
-                    result.append(CGFloat((gameHeight - upperAdSpace) / (i * 2) * (1 + (k - 1) * 2)))
+                    let contentHeight   : CGFloat = CGFloat(gameHeight - upperAdSpace)
+                    let division        : CGFloat = CGFloat(i * 2)
+                    let size            : CGFloat = CGFloat(1 + (k - 1) * 2)
+                    let addValue        : CGFloat = contentHeight / division * size
+                    result.append(addValue)
                 }
             }
             parts.append(result)
         }
+        
+        menuHeight = CGFloat(gameHeight - upperAdSpace) - parts[14][1] * 960.0 / CGFloat(gameHeight)
     }
 }

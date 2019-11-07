@@ -7,9 +7,9 @@ class StretchBg : PageParts {
     override init(aSKScene : SKScene, aXPosition : SXPosition, aYPosition : SYPosition) {
         super.init(aSKScene: aSKScene, aXPosition: aXPosition, aYPosition: aYPosition)
         
-        // 背景の白
+        // 背景
         var sSprite = SSprite()
-        sSprite.name = "Debug"
+        sSprite.name = "Bg"
         sSprite.imgName = "Bg"
         sSprite.xyPosition = CGPoint(x : aXPosition.center, y : aYPosition.center)
         sSprite.zPosition = eZPosition.BG
@@ -25,5 +25,12 @@ class StretchBg : PageParts {
         square.zPosition = eZPosition.BG
         square.name = "AdSpace"
         aSKScene.addChild(square)
+        
+        // メニュー
+        sSprite.imgName = "MenuBg"
+        sSprite.xyPosition = CGPoint(x : aXPosition.parts[1][1], y : aYPosition.menuHeight)
+        sSprite.zPosition = eZPosition.BG
+        sSprite.hidden = false
+        aSKScene.addChild(sSprite.node())
     }
 }

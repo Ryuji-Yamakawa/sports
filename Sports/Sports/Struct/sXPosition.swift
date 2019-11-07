@@ -19,7 +19,11 @@ struct SXPosition {
                     result.append(CGFloat(gameWidth))
                 }
                 else {
-                    result.append(CGFloat(gameWidth / (i * 2) * (1 + (k - 1) * 2)))
+                    let contentWidth    : CGFloat = CGFloat(gameWidth)
+                    let division        : CGFloat = CGFloat(i * 2)
+                    let size            : CGFloat = CGFloat(1 + (k - 1) * 2)
+                    let addValue        : CGFloat = contentWidth / division * size
+                    result.append(addValue)
                 }
             }
             parts.append(result)
