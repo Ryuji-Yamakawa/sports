@@ -4,7 +4,7 @@ It is not completed yet.
 
 # Description
  
-You can learn how to making page sride app with SpriteKit.
+You can learn how to create a page slide app with SpriteKit.
 
 ## Requirement
 macOS
