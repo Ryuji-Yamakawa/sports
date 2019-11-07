@@ -50,14 +50,10 @@ class Stretch {
                 if aTouch.dragDirec == .LEFT && sStretchControl.pageRight != .NONE {
                     // 右に動いた
                     sStretchControl.pageNext = sStretchControl.pageRight
-                    sStretchControl.pageRight = .NONE
-                    sStretchControl.pageLeft = sStretchControl.pageNow
                 }
                 else if aTouch.dragDirec == .RIGHT && sStretchControl.pageLeft != .NONE {
                     // 左に動いた
                     sStretchControl.pageNext = sStretchControl.pageLeft
-                    sStretchControl.pageRight = sStretchControl.pageNow
-                    sStretchControl.pageLeft = .NONE
                 }
                 else if sStretchControl.pageNow == sStretchControl.pageNext {
                     // スワイプキャンセル
@@ -90,13 +86,18 @@ class Stretch {
         sStretchControl.buttonAction = ""
         
         if aTouch.stat == .END {
-            print("Stretch確認",sStretchControl.pageLeft, sStretchControl.pageNow, sStretchControl.pageRight)
+            print("Stretch確認",sStretchControl.pageLeftOut,sStretchControl.pageLeft,
+                  "【" , sStretchControl.pageNow , "】" ,
+                  sStretchControl.pageRight, sStretchControl.pageRightOut)
         }
         
         return aGameControl
     }
     
     func pageChange() {
+        
+        var nowPageGoTo : ePagePosition = .RIGHT
+        
         if sStretchControl.pageNow.xPosition() < sStretchControl.pageNext.xPosition() {
             // 右のページに移動
             sStretchControl.pageLeftOut  = sStretchControl.pageLeft
@@ -104,21 +105,7 @@ class Stretch {
             sStretchControl.pageRight    = sStretchControl.pageRightOut
             sStretchControl.pageRightOut = .NONE
             
-            switch sStretchControl.pageNow {
-            case .NONE      : print("Stretch pageChangeエラー <")
-            case .HOME      : home.pageChange(aDestination: .LEFT, aXFlag: true, aInitFlag: false)
-            case .SOCCER    : soccer.pageChange(aDestination: .LEFT, aXFlag: true, aInitFlag: false)
-            case .BASKET    : basket.pageChange(aDestination: .LEFT, aXFlag: true, aInitFlag: false)
-            case .TIMECOUNT : timeCount.pageChange(aDestination: .LEFT, aXFlag: true, aInitFlag: false)
-            }
-            
-            switch sStretchControl.pageNext {
-            case .NONE      : print("Stretch pageChangeエラー <")
-            case .HOME      : home.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
-            case .SOCCER    : soccer.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
-            case .BASKET    : basket.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
-            case .TIMECOUNT : timeCount.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
-            }
+            nowPageGoTo = .LEFT
         }
         else if sStretchControl.pageNow.xPosition() > sStretchControl.pageNext.xPosition() {
             // 左のページに移動
@@ -127,21 +114,23 @@ class Stretch {
             sStretchControl.pageLeft     = sStretchControl.pageLeftOut
             sStretchControl.pageLeftOut  = .NONE
             
-            switch sStretchControl.pageNow {
-            case .NONE      : print("Stretch pageChangeエラー >")
-            case .HOME      : home.pageChange(aDestination: .RIGHT, aXFlag: true, aInitFlag: false)
-            case .SOCCER    : soccer.pageChange(aDestination: .RIGHT, aXFlag: true, aInitFlag: false)
-            case .BASKET    : basket.pageChange(aDestination: .RIGHT, aXFlag: true, aInitFlag: false)
-            case .TIMECOUNT : timeCount.pageChange(aDestination: .RIGHT, aXFlag: true, aInitFlag: false)
-            }
-            
-            switch sStretchControl.pageNext {
-            case .NONE      : print("Stretch pageChangeエラー >")
-            case .HOME      : home.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
-            case .SOCCER    : soccer.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
-            case .BASKET    : basket.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
-            case .TIMECOUNT : timeCount.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
-            }
+            nowPageGoTo = .RIGHT
+        }
+        
+        switch sStretchControl.pageNext {
+        case .NONE      : print("Stretch pageChangeエラー")
+        case .HOME      : home.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
+        case .SOCCER    : soccer.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
+        case .BASKET    : basket.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
+        case .TIMECOUNT : timeCount.pageChange(aDestination: .CENTER, aXFlag: true, aInitFlag: false)
+        }
+        
+        switch sStretchControl.pageNow {
+        case .NONE      : print("Stretch pageChangeエラー")
+        case .HOME      : home.pageChange(aDestination: nowPageGoTo, aXFlag: true, aInitFlag: false)
+        case .SOCCER    : soccer.pageChange(aDestination: nowPageGoTo, aXFlag: true, aInitFlag: false)
+        case .BASKET    : basket.pageChange(aDestination: nowPageGoTo, aXFlag: true, aInitFlag: false)
+        case .TIMECOUNT : timeCount.pageChange(aDestination: nowPageGoTo, aXFlag: true, aInitFlag: false)
         }
     }
 }
