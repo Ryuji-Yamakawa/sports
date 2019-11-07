@@ -1,5 +1,6 @@
 # sports
 This project "sports" is iOS App for count time of stretch.
+It is not completed yet.
 
 # Description
  
