@@ -9,7 +9,7 @@ class StretchBg : PageParts {
         
         // 背景
         var sSprite = SSprite()
-        sSprite.name = "Bg" + ""//test
+        sSprite.name = "Bg"
         sSprite.imgName = "Bg"
         sSprite.xyPosition = CGPoint(x : aXPosition.center, y : aYPosition.center)
         sSprite.zPosition = eZPosition.BG
