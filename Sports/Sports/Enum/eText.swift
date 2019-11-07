@@ -11,6 +11,8 @@ enum eText : Int {
     case STRETCH4 = 6
     case BACK     = 7
     
+    case UNDERMAKING = 99
+    
     func string() -> String {
         switch self {
         case .SOCCER:
@@ -27,6 +29,9 @@ enum eText : Int {
             return "ストレッチ4"
         case .BACK:
             return "もどる"
+            
+        case .UNDERMAKING:
+            return "（作成中）"
         }
     }
 }

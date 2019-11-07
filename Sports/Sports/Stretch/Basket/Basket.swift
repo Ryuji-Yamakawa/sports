@@ -28,9 +28,11 @@ class Basket : Page {
                 rStretchControl.pageNext = .HOME
                 rGameControl.touchLockTime = STime().basicLock
             }
-            else if aTouch.endN == BasketButton.mStretch3 {
+            else if aTouch.endN == BasketButton.mStretch3 || aTouch.endN == BasketButton.mStretch4 {
                 rStretchControl.pageNext = .TIMECOUNT
                 rGameControl.touchLockTime = STime().basicLock
+                
+                rStretchControl.buttonAction = aTouch.endN
             }
         }
         

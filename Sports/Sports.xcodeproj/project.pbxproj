@@ -28,6 +28,11 @@
 		4D3A35322371B68400907FC9 /* BasketButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A35312371B68400907FC9 /* BasketButton.swift */; };
 		4D3A35352372427B00907FC9 /* TimeCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A35342372427B00907FC9 /* TimeCount.swift */; };
 		4D3A35372372428900907FC9 /* TimeCountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A35362372428900907FC9 /* TimeCountButton.swift */; };
+		4D3A35402372871300907FC9 /* TimeCountBg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A353F2372871300907FC9 /* TimeCountBg.swift */; };
+		4D3A35442372AA6900907FC9 /* stretchMan02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3A35412372AA6900907FC9 /* stretchMan02@2x.png */; };
+		4D3A35452372AA6900907FC9 /* stretchMan03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3A35422372AA6900907FC9 /* stretchMan03@2x.png */; };
+		4D3A35462372AA6900907FC9 /* stretchMan01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3A35432372AA6900907FC9 /* stretchMan01@2x.png */; };
+		4D3A354A2373ADE500907FC9 /* stretchMan04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3A35492373ADE500907FC9 /* stretchMan04@2x.png */; };
 		4D41A5F0236E4F84000A85DE /* sBasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A5EF236E4F84000A85DE /* sBasicButton.swift */; };
 		4D41A5F2236E90FE000A85DE /* BasicButtonParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A5F1236E90FE000A85DE /* BasicButtonParts.swift */; };
 		4D78F0E423681A64004F69B1 /* eDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0E323681A64004F69B1 /* eDevice.swift */; };
@@ -81,6 +86,11 @@
 		4D3A35312371B68400907FC9 /* BasketButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketButton.swift; sourceTree = "<group>"; };
 		4D3A35342372427B00907FC9 /* TimeCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCount.swift; sourceTree = "<group>"; };
 		4D3A35362372428900907FC9 /* TimeCountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCountButton.swift; sourceTree = "<group>"; };
+		4D3A353F2372871300907FC9 /* TimeCountBg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCountBg.swift; sourceTree = "<group>"; };
+		4D3A35412372AA6900907FC9 /* stretchMan02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stretchMan02@2x.png"; sourceTree = "<group>"; };
+		4D3A35422372AA6900907FC9 /* stretchMan03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stretchMan03@2x.png"; sourceTree = "<group>"; };
+		4D3A35432372AA6900907FC9 /* stretchMan01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stretchMan01@2x.png"; sourceTree = "<group>"; };
+		4D3A35492373ADE500907FC9 /* stretchMan04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stretchMan04@2x.png"; sourceTree = "<group>"; };
 		4D41A5EF236E4F84000A85DE /* sBasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sBasicButton.swift; sourceTree = "<group>"; };
 		4D41A5F1236E90FE000A85DE /* BasicButtonParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButtonParts.swift; sourceTree = "<group>"; };
 		4D78F0E323681A64004F69B1 /* eDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eDevice.swift; sourceTree = "<group>"; };
@@ -213,9 +223,21 @@
 			isa = PBXGroup;
 			children = (
 				4D3A35342372427B00907FC9 /* TimeCount.swift */,
+				4D3A353F2372871300907FC9 /* TimeCountBg.swift */,
 				4D3A35362372428900907FC9 /* TimeCountButton.swift */,
 			);
 			path = TimeCount;
+			sourceTree = "<group>";
+		};
+		4D3A3538237284E200907FC9 /* StretchMan */ = {
+			isa = PBXGroup;
+			children = (
+				4D3A35432372AA6900907FC9 /* stretchMan01@2x.png */,
+				4D3A35412372AA6900907FC9 /* stretchMan02@2x.png */,
+				4D3A35422372AA6900907FC9 /* stretchMan03@2x.png */,
+				4D3A35492373ADE500907FC9 /* stretchMan04@2x.png */,
+			);
+			path = StretchMan;
 			sourceTree = "<group>";
 		};
 		4D78F0E523681CA2004F69B1 /* Engine */ = {
@@ -252,6 +274,7 @@
 		4D78F109236AD103004F69B1 /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				4D3A3538237284E200907FC9 /* StretchMan */,
 				4D3A351823700F3400907FC9 /* Button */,
 				4D78F10F236AD6E6004F69B1 /* Bg */,
 				4D78F10A236AD152004F69B1 /* Debug */,
@@ -348,11 +371,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3A3520237010CA00907FC9 /* 540x136_ButtonTouch@2x.png in Resources */,
+				4D3A354A2373ADE500907FC9 /* stretchMan04@2x.png in Resources */,
 				4D1E48942361C15000F13E41 /* LaunchScreen.storyboard in Resources */,
 				4D78F111236AD760004F69B1 /* Bg@2x.png in Resources */,
+				4D3A35462372AA6900907FC9 /* stretchMan01@2x.png in Resources */,
 				4D1E48912361C15000F13E41 /* Assets.xcassets in Resources */,
+				4D3A35452372AA6900907FC9 /* stretchMan03@2x.png in Resources */,
 				4D78F10D236AD169004F69B1 /* 360x162_Upper@2x.png in Resources */,
 				4D1E488F2361C14D00F13E41 /* Main.storyboard in Resources */,
+				4D3A35442372AA6900907FC9 /* stretchMan02@2x.png in Resources */,
 				4D78F10E236AD169004F69B1 /* 360x162_Under@2x.png in Resources */,
 				4D3A351C23700F8800907FC9 /* 540x136_ButtonBase@2x.png in Resources */,
 			);
@@ -368,6 +395,7 @@
 				4D3A352D2371B16B00907FC9 /* eText.swift in Sources */,
 				4D1E489D2361C6C700F13E41 /* sTime.swift in Sources */,
 				4D78F11E236B0A8D004F69B1 /* PageParts.swift in Sources */,
+				4D3A35402372871300907FC9 /* TimeCountBg.swift in Sources */,
 				4D3A3524237159FA00907FC9 /* Page.swift in Sources */,
 				4D3A35302371B66600907FC9 /* Basket.swift in Sources */,
 				4D3A3515236FE3BF00907FC9 /* ePage.swift in Sources */,

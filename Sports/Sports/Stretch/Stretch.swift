@@ -75,11 +75,19 @@ class Stretch {
             }
         }
         
+        // ストレッチの画像を変える
+        if sStretchControl.buttonAction.contains("Stretch") == true {
+            if timeCount.getNoeStretchMan() != sStretchControl.buttonAction {
+                timeCount.setStretchMan(aName: sStretchControl.buttonAction)
+            }
+        }
         if sStretchControl.pageNow != sStretchControl.pageNext {
             pageChange()
         }
         
+        // sStretchControlの一部をリセット
         sStretchControl.pageNow = sStretchControl.pageNext
+        sStretchControl.buttonAction = ""
         
         if aTouch.stat == .END {
             print("Stretch確認",sStretchControl.pageLeft, sStretchControl.pageNow, sStretchControl.pageRight)

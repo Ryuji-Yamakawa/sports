@@ -5,11 +5,18 @@ import SpriteKit
 class TimeCount : Page {
     
     var timeCountButton : TimeCountButton!
+    var timeCountBg : TimeCountBg!
+    
+    var nowStretchMan : String = ""
     
     override init (aSKScene : SKScene, aXPosition : SXPosition, aYPosition : SYPosition) {
         super.init(aSKScene: aSKScene, aXPosition: aXPosition, aYPosition: aYPosition)
         
-        pageParts.append(TimeCountButton(aSKScene: skScene, aXPosition: sXPosition, aYPosition: sYPosition))
+        timeCountButton = TimeCountButton(aSKScene: skScene, aXPosition: sXPosition, aYPosition: sYPosition)
+        timeCountBg     = TimeCountBg(aSKScene: skScene, aXPosition: sXPosition, aYPosition: sYPosition)
+        
+        pageParts.append(timeCountButton)
+        pageParts.append(timeCountBg)
         
         pageChange(aDestination: .RIGHT, aXFlag: true, aInitFlag: true)
     }
@@ -30,8 +37,17 @@ class TimeCount : Page {
             }
         }
         
-        
-        
         return (rGameControl, rStretchControl)
+    }
+    func setStretchMan(aName : String) {
+        print("TimeCount 画像変更")
+        nowStretchMan = aName
+        timeCountBg.setStretchMan(aName: nowStretchMan)
+        
+        pageChange(aDestination: .RIGHT, aXFlag: true, aInitFlag: true)
+    }
+    
+    func getNoeStretchMan() -> String {
+        return nowStretchMan
     }
 }

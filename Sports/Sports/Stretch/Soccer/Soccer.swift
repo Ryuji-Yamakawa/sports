@@ -28,9 +28,11 @@ class Soccer : Page {
                 rStretchControl.pageNext = .HOME
                 rGameControl.touchLockTime = STime().basicLock
             }
-            else if aTouch.endN == SoccerButton.mStretch1 {
+            else if aTouch.endN == SoccerButton.mStretch1 || aTouch.endN == SoccerButton.mStretch2 {
                 rStretchControl.pageNext = .TIMECOUNT
                 rGameControl.touchLockTime = STime().basicLock
+                
+                rStretchControl.buttonAction = aTouch.endN
             }
         }
         

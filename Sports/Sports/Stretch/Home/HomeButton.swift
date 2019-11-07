@@ -16,12 +16,12 @@ class HomeButton : BasicButtonParts {
         sBasicButton.text = eText.SOCCER.string()
         sBasicButton.baseImg = "540x136_ButtonBase"
         sBasicButton.touchImg = "540x136_ButtonTouch"
-        sBasicButton.xyPosition = CGPoint(x: aXPosition.parts[4][2], y: aYPosition.parts[14][2])
+        sBasicButton.xyPosition = CGPoint(x: aXPosition.parts[1][1], y: aYPosition.parts[14][8])
         make(aBasicButton: sBasicButton)
 
         sBasicButton.name = HomeButton.mBasket
         sBasicButton.text = eText.BASKET.string()
-        sBasicButton.xyPosition = CGPoint(x: aXPosition.parts[4][2], y: aYPosition.parts[14][4])
+        sBasicButton.xyPosition = CGPoint(x: aXPosition.parts[1][1], y: aYPosition.parts[14][6])
         make(aBasicButton: sBasicButton)
     }
 }
