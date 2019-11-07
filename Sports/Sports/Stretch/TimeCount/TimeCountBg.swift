@@ -38,7 +38,7 @@ class TimeCountBg : BasicButtonParts {
         sBasicButton.text = ""
         sBasicButton.baseImg = baseImg
         sBasicButton.touchImg = ""
-        sBasicButton.xyPosition = CGPoint(x: sXPosition.parts[1][1], y: sYPosition.parts[14][7])
+        sBasicButton.xyPosition = CGPoint(x: sXPosition.parts[1][1], y: sYPosition.parts[14][9])
         sBasicButton.zPosition = eZPosition.BG
         make(aBasicButton: sBasicButton)
     }

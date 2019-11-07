@@ -30,10 +30,10 @@ struct SYPosition {
             var result : [CGFloat] = []
             for k in 0 ... i {
                 if i == 0 {
-                    result.append(CGFloat(gameHeight))
+                    result.append(CGFloat(gameHeight - upperAdSpace))
                 }
                 else {
-                    result.append(CGFloat(gameHeight / i * k))
+                    result.append(CGFloat((gameHeight - upperAdSpace) / (i * 2) * (1 + (k - 1) * 2)))
                 }
             }
             parts.append(result)

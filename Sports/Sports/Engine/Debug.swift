@@ -31,7 +31,7 @@ class Debug {
         sLabel.name = "DebugNode"
         sLabel.color = eFont.BUTTON.color()
         sLabel.size = eFont.BUTTON.size()
-        sLabel.xyPosition = CGPoint(x: aXPosition.parts[2][1], y: aYPosition.parts[14][10])
+        sLabel.xyPosition = CGPoint(x: aXPosition.parts[2][1], y: aYPosition.parts[14][12])
         sLabel.zPosition = eZPosition.DEBUG
         sLabel.text = "デバッグ"
         labels.append(sLabel.node())
