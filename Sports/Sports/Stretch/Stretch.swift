@@ -71,20 +71,21 @@ class Stretch {
             }
         }
         
-        // ストレッチの画像を変える
+        // buttonActionを実行・リセット
         if sStretchControl.buttonAction.contains("Stretch") == true {
             if timeCount.getNoeStretchMan() != sStretchControl.buttonAction {
                 timeCount.setStretchMan(aName: sStretchControl.buttonAction)
             }
         }
-        if sStretchControl.pageNow != sStretchControl.pageNext {
-            pageChange()
-        }
-        
-        // sStretchControlの一部をリセット
-        sStretchControl.pageNow = sStretchControl.pageNext
         sStretchControl.buttonAction = ""
         
+        // ページが変わっていたら変更
+        if sStretchControl.pageNow != sStretchControl.pageNext {
+            pageChange()
+            sStretchControl.pageNow = sStretchControl.pageNext
+        }
+        
+        // デバッグ
         if aTouch.stat == .END {
             print("Stretch確認",sStretchControl.pageLeftOut,sStretchControl.pageLeft,
                   "【" , sStretchControl.pageNow , "】" ,
