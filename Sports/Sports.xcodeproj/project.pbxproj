@@ -33,6 +33,7 @@
 		4D3A35452372AA6900907FC9 /* stretchMan03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3A35422372AA6900907FC9 /* stretchMan03@2x.png */; };
 		4D3A35462372AA6900907FC9 /* stretchMan01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3A35432372AA6900907FC9 /* stretchMan01@2x.png */; };
 		4D3A354A2373ADE500907FC9 /* stretchMan04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3A35492373ADE500907FC9 /* stretchMan04@2x.png */; };
+		4D3A354E2373EED000907FC9 /* MenuBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D3A354D2373EED000907FC9 /* MenuBg@2x.png */; };
 		4D41A5F0236E4F84000A85DE /* sBasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A5EF236E4F84000A85DE /* sBasicButton.swift */; };
 		4D41A5F2236E90FE000A85DE /* BasicButtonParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A5F1236E90FE000A85DE /* BasicButtonParts.swift */; };
 		4D78F0E423681A64004F69B1 /* eDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78F0E323681A64004F69B1 /* eDevice.swift */; };
@@ -91,6 +92,7 @@
 		4D3A35422372AA6900907FC9 /* stretchMan03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stretchMan03@2x.png"; sourceTree = "<group>"; };
 		4D3A35432372AA6900907FC9 /* stretchMan01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stretchMan01@2x.png"; sourceTree = "<group>"; };
 		4D3A35492373ADE500907FC9 /* stretchMan04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stretchMan04@2x.png"; sourceTree = "<group>"; };
+		4D3A354D2373EED000907FC9 /* MenuBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MenuBg@2x.png"; sourceTree = "<group>"; };
 		4D41A5EF236E4F84000A85DE /* sBasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sBasicButton.swift; sourceTree = "<group>"; };
 		4D41A5F1236E90FE000A85DE /* BasicButtonParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButtonParts.swift; sourceTree = "<group>"; };
 		4D78F0E323681A64004F69B1 /* eDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eDevice.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 		4D78F10F236AD6E6004F69B1 /* Bg */ = {
 			isa = PBXGroup;
 			children = (
+				4D3A354D2373EED000907FC9 /* MenuBg@2x.png */,
 				4D78F110236AD760004F69B1 /* Bg@2x.png */,
 			);
 			path = Bg;
@@ -371,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3A3520237010CA00907FC9 /* 540x136_ButtonTouch@2x.png in Resources */,
+				4D3A354E2373EED000907FC9 /* MenuBg@2x.png in Resources */,
 				4D3A354A2373ADE500907FC9 /* stretchMan04@2x.png in Resources */,
 				4D1E48942361C15000F13E41 /* LaunchScreen.storyboard in Resources */,
 				4D78F111236AD760004F69B1 /* Bg@2x.png in Resources */,
