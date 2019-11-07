@@ -25,6 +25,8 @@ class Stretch {
         var sGameControl = aGameControl
         
         // あそびの範囲内
+        
+        // ページのタッチENDとタッチ画像
         switch sStretchControl.pageNow {
         case .NONE      : print("Stretchエラー setTouch")
         case .HOME      : (sGameControl, sStretchControl) = home.setTouch(aTouch: aTouch, aGameControl: sGameControl, aStretchControl: sStretchControl)
@@ -33,7 +35,11 @@ class Stretch {
         case .TIMECOUNT : (sGameControl, sStretchControl) = timeCount.setTouch(aTouch: aTouch, aGameControl: sGameControl, aStretchControl: sStretchControl)
         }
         
+        // メニューのタッチEND
+        (sGameControl, sStretchControl) = menu.setTouch(aTouch: aTouch, aGameControl: sGameControl, aStretchControl: sStretchControl)
+        
         // あそびの外
+        
         if aTouch.dragDirec != .NONE {
             // スワイプ追従アニメ
             for i in [sStretchControl.pageLeft, sStretchControl.pageNow, sStretchControl.pageRight] {
