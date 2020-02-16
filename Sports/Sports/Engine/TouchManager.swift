@@ -21,7 +21,7 @@ class TouchManager {
         sTouch.beginN = node
         sTouch.dragDirec = .NONE
         
-        sTouch.beforeY = y   // ver.2.2スクロールに変更。
+        sTouch.beforeY = y   // ver.2.2スクロール用に追加。
     }
     
     // タッチドラッグ
@@ -73,7 +73,6 @@ class TouchManager {
         
         // 遊びを超えていたら。
         if sTouch.dragDirec != .NONE {
-            // 遊びを超えているなら。
             sTouch.moveX = sTouch.nowX - sTouch.beginX
             sTouch.moveY = sTouch.nowY - sTouch.beginY
         }
